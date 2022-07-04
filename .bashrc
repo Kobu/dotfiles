@@ -2,6 +2,10 @@
 # ~/.bashrc
 #
 
+# run fastfetch at every terminal open
+fastfetch
+
+# aisa login helper
 alias aisa='ssh xjakube1@aisa.fi.muni.cz'
 
 # If not running interactively, don't do anything
@@ -26,13 +30,10 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # f"{time} [kobu@arch: {PWD}]"" 
 PS1=' \A \[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\] '
 
-# run fastfetch at every terminal open
-fastfetch
+export PATH="$PATH:/home/kobu/.local/bin"
 
 # make FIMUNI directory globally available
 export FIMUNI=/home/kobu/coding/FIMUNI
-
-export PATH="$PATH:/home/kobu/.local/bin"
 
 # make every file in FIMUNI folder globally available
 for el in $(ls $FIMUNI); do
@@ -72,4 +73,5 @@ export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 # npm: .npmrc
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/.npmrc"
 
+# X11: .xinitrc
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
