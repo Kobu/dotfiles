@@ -12,11 +12,13 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-local naughty = require("naughty")
+-- local naughty = require("naughty")
+local naughty do local old_dbus = dbus; dbus = nil; naughty = require("naughty") ; dbus = old_dbus ; end
 -- Declarative object management
 local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -29,7 +31,6 @@ naughty.connect_signal("request::display_error", function(message, startup)
     }
 end)
 -- }}}
-
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/home/kobu/.config/awesome/theme.lua")
@@ -372,6 +373,5 @@ end)
 
 awful.spawn.with_shell("/home/kobu/.config/polybar/launch.sh")
 awful.spawn.with_shell("picom --experimental-backends")
--- awful.spawn.with_shell("kmix")
-
+awful.spawn.with_shell("/usr/bin/dunst")
 beautiful.useless_gap = 6
