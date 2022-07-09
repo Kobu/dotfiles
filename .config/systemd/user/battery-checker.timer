@@ -1,0 +1,11 @@
+[Unit]
+Description=Battery checker timer
+
+[Timer]
+OnBootSec=1min
+OnCalendar=*:*:0/30
+Unit=battery-checker.service
+
+[Install]
+WantedBy=default.target
+

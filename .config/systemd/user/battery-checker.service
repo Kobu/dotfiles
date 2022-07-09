@@ -1,0 +1,5 @@
+[Unit]
+Description=Checks battery level and reports if its too low
+
+[Service]
+ExecStart=/home/kobu/.local/bin/battery_checker
