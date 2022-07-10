@@ -2,7 +2,7 @@
 
 # Get battery percentage left
 if [ -z $1 ]; then
-  BAT=$(acpi -b | sed -e "s/.* \([0-9]\+\)%.*/\1/" | head -1)
+  BAT=$(acpi -b | grep -v unavailable | sed -e "s/.* \([0-9]\+\)%.*/\1/")
 else
   BAT=$1 # allow to pass an argument for easier debugging
 fi
