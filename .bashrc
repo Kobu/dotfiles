@@ -1,6 +1,10 @@
 #
 # ~/.bashrc
 #
+
+# aise login helper
+alias aisa='ssh xjakube1@aisa.fi.muni.cz'
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
