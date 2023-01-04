@@ -8,6 +8,9 @@ alias aisa='ssh xjakube1@aisa.fi.muni.cz'
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# recursively remove orphaned packages
+alias p_orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
+
 # f"{time} [kobu@arch: {PWD}]"" 
 PS1=' \A \[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\] '
 
