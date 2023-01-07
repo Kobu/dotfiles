@@ -17,6 +17,10 @@ alias p_cache='sudo pacman -Scc && yay -Scc'
 # remove journal
 alias p_journals='sudo journalctl --vacuum-size=10M'
 
+# add color to common commands
+alias ls='ls --color=auto'
+alias grep='grep --color -n'
+
 # f"{time} [kobu@arch: {PWD}]"" 
 PS1=' \A \[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\] '
 
