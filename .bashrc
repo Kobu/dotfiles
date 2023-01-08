@@ -21,6 +21,9 @@ alias p_journals='sudo journalctl --vacuum-size=10M'
 alias ls='ls --color=auto'
 alias grep='grep --color -n'
 
+# alias for better handling of dotfile
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 # f"{time} [kobu@arch: {PWD}]"" 
 PS1=' \A \[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\] '
 
