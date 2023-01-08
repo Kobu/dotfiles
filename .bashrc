@@ -33,6 +33,8 @@ fastfetch
 # make FIMUNI directory globally available
 export FIMUNI=/home/kobu/coding/FIMUNI
 
+export PATH="$PATH:/home/kobu/.local/bin"
+
 # make every file in FIMUNI folder globally available
 for el in $(ls $FIMUNI); do
 	export $(echo $el)=$FIMUNI/$el
