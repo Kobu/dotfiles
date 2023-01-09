@@ -48,3 +48,6 @@ export XDG_DATA_DIRS="/usr/local/share:/usr/share"
 
 # cargo: .cargo
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+
+# gnupg: .gnupg
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
