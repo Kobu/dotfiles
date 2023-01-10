@@ -54,3 +54,6 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # gtk-2: .gtkrc-2.0
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+
+# less: .lesshst
+export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
