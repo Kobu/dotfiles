@@ -60,3 +60,6 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 
 # mypy: .mypy_cache
 export MYPY_CACHE_DIR="$XDG_CACHE_HOME/mypy"
+
+# nuget: .nuget/packages
+export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
