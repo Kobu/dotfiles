@@ -63,3 +63,6 @@ export MYPY_CACHE_DIR="$XDG_CACHE_HOME/mypy"
 
 # nuget: .nuget/packages
 export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
+
+# openjdk: .java
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
