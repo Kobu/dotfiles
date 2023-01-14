@@ -66,3 +66,6 @@ export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 
 # openjdk: .java
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
+# xorg-xauth: .Xauthority
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
