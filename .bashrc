@@ -69,3 +69,6 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 # xorg-xauth: .Xauthority
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+
+# npm: .npmrc
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/.npmrc"
