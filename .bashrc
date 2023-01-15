@@ -72,3 +72,6 @@ export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
 # npm: .npmrc
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/.npmrc"
+
+# X11: .xinitrc
+export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
