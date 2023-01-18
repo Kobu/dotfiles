@@ -370,3 +370,4 @@ end)
 
 -- }}}
 
+beautiful.useless_gap = 6
