@@ -370,4 +370,5 @@ end)
 
 -- }}}
 
+awful.spawn.with_shell("/home/kobu/.config/polybar/launch.sh")
 beautiful.useless_gap = 6
