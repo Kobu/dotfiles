@@ -371,4 +371,5 @@ end)
 -- }}}
 
 awful.spawn.with_shell("/home/kobu/.config/polybar/launch.sh")
+awful.spawn.with_shell("picom --experimental-backends")
 beautiful.useless_gap = 6
