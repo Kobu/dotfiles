@@ -370,6 +370,15 @@ end)
 
 -- }}}
 
+awful.keyboard.append_global_keybindings({
+    awful.key({ modkey}, "Up", function ()
+				awful.util.spawn_with_shell("~/.local/bin/volume_changer up") end,
+              {description = "increase volume", group = "audio"}),
+    awful.key({ modkey}, "Down", function ()
+				awful.util.spawn_with_shell("~/.local/bin/volume_changer down") end,
+              {description = "decrease volume", group = "audio"}),
+})
+
 awful.spawn.with_shell("/home/kobu/.config/polybar/launch.sh")
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("/usr/bin/dunst")

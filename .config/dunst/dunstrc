@@ -1,6 +1,7 @@
 # See dunst(5) for all configuration options
 
 [global]
+    mouse_middle_click = context,close_current #close_current is optional
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
@@ -90,7 +91,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#aafaaf"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -263,18 +264,6 @@
     # Set this to true to use X11 output on Wayland.
     force_xwayland = false
 
-    ### Legacy
-
-    # Use the Xinerama extension instead of RandR for multi-monitor support.
-    # This setting is provided for compatibility with older nVidia drivers that
-    # do not support RandR and using it on systems that support RandR is highly
-    # discouraged.
-    #
-    # By enabling this setting dunst will not be able to detect when a monitor
-    # is connected or disconnected which might break follow mode if the screen
-    # layout changes.
-    force_xinerama = false
-
     ### mouse
 
     # Defines list of actions for each mouse event
@@ -311,8 +300,6 @@
     background = "#222222"
     foreground = "#888888"
     timeout = 10
-    # Icon for notifications with low urgency, uncomment to enable
-    #default_icon = /path/to/icon
 
 [urgency_normal]
     background = "#285577"
@@ -320,6 +307,12 @@
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
+
+
+[audio-setting]
+    stack_tag = "audio"
+    background = "#285577"
+    timeout = 3
 
 [urgency_critical]
     background = "#900000"
