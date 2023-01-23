@@ -308,12 +308,6 @@
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
-
-[audio-setting]
-    stack_tag = "audio"
-    background = "#285577"
-    timeout = 3
-
 [urgency_critical]
     background = "#900000"
     foreground = "#ffffff"
@@ -321,6 +315,15 @@
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon
+
+[audio-setting]
+    stack_tag = "audio"
+    background = "#285577"
+    timeout = 3
+
+[brightness-setting]
+    stack_tag = "brightness"
+    timeout = 3
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

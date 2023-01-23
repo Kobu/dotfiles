@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ACTION=$1
+AMOUNT=15
+
+case $ACTION in
+    up)
+        light -A $AMOUNT;;
+    down)
+        light -U $AMOUNT;;
+esac
+
+
+CURRENT=$(light -G)
+dunstify -h string:x-dunst-stack-tag:brightness -h int:value:${CURRENT} "Brightness: [${CURRENT}%]"

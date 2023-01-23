@@ -122,10 +122,6 @@ awful.keyboard.append_global_keybindings({
 
 -- Tags related keybindings
 awful.keyboard.append_global_keybindings({
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 })
@@ -377,6 +373,12 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey}, "Down", function ()
 				awful.util.spawn_with_shell("~/.local/bin/volume_changer down") end,
               {description = "decrease volume", group = "audio"}),
+    awful.key({ modkey,           }, "Left", function ()
+                awful.util.spawn_with_shell("~/.local/bin/brightness_changer down") end,
+              {description = "view previous", group = "tag"}),
+    awful.key({ modkey,           }, "Right", function ()
+                awful.util.spawn_with_shell("~/.local/bin/brightness_changer up") end,
+              {description = "view previous", group = "tag"}),
 })
 
 awful.spawn.with_shell("/home/kobu/.config/polybar/launch.sh")
