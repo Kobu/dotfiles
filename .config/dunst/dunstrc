@@ -325,6 +325,37 @@
     stack_tag = "brightness"
     timeout = 3
 
+[battery-critical]
+    stack_tag = "battery-0"
+    frame_color = "#B7472A"
+    foreground = "#B7472A"
+    background = "#191311"
+    highlight = "#B7472A"
+
+[battery-low]
+  stack_tag = "battery-1"
+  frame_color = "#e3c30e"
+  foreground = "#e3c30e"
+  background = "#191311"
+  highlight = "#e3c30e"
+  timeout = 15
+
+[battery-medium]
+  stack_tag = "battery-2"
+  frame_color = "#3B7C87"
+  foreground = "#3B7C87"
+  background = "#191311"
+  highlight = "#3B7C87"
+  timeout = 5
+
+[battery-full]
+  stack_tag = "battery-3"
+  frame_color = "#5B8234"
+  foreground = "#5B8234"
+  background = "#191311"
+  highlight = "#5B8234"
+  timeout = 5
+
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 #

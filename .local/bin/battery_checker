@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Get battery percentage left
+if [ -z $1 ]; then
+  BAT=$(acpi -b | sed -e "s/.* \([0-9]\+\)%.*/\1/" | head -1)
+else
+  BAT=$1 # allow to pass an argument for easier debugging
+fi
+
+STATE_FILE="/home/kobu/.local/state"
+# Sets severity of battery level:
+  # critical -> 0
+  # low -> 1
+  # medium -> 2
+  # full -> 3
+  # not interested -> 4
+if [ $BAT -le 5 ]; then
+  CURRENT=0
+elif [ $BAT -le 15 ]; then
+  CURRENT=1
+elif [ $BAT -le 50 ]; then
+  CURRENT=2
+elif [ $BAT -eq 100 ]; then
+  CURRENT=3
+else
+  CURRENT=4 # this will never cause a notification
+fi
+
+
+# Create the state file if it doesnt exists yet to prevent errors
+if ! [ -f "$STATE_FILE/battery-level" ]; then
+  echo "$CURRENT" > $STATE_FILE/battery-level
+  exit 0
+fi
+
+# Fetch the previous severity level from the state file
+PREV=$(cat $STATE_FILE/battery-level)
+
+# Notify if current severity level is lower than the previous one (battery dropped) or
+# if battery just got full
+if [ $CURRENT -lt $PREV ] || [[ $CURRENT -eq 3 && $PREV -lt 3 ]]; then
+  dunstify -h string:x-dunst-stack-tag:battery-${CURRENT} -h int:value:${BAT} "Battery: [${BAT}%]"
+fi
+
+# Save the current severity level 
+echo $CURRENT > $STATE_FILE/battery-level
