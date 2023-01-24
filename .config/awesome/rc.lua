@@ -266,12 +266,6 @@ end)
 
 client.connect_signal("request::default_keybindings", function()
     awful.keyboard.append_client_keybindings({
-        awful.key({ modkey,           }, "f",
-            function (c)
-                c.fullscreen = not c.fullscreen
-                c:raise()
-            end,
-            {description = "toggle fullscreen", group = "client"}),
         awful.key({ modkey,   }, "q",      function (c) c:kill()                         end,
                 {description = "close", group = "client"}),
         awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
@@ -379,6 +373,9 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey,           }, "Right", function ()
                 awful.util.spawn_with_shell("~/.local/bin/brightness_changer up") end,
               {description = "view previous", group = "tag"}),
+    awful.key({ modkey,           }, "f", function ()
+              awful.util.spawn_with_shell("firefox") end,
+            {description = "run firefox", group = "launcher"}),
 })
 
 awful.spawn.with_shell("/home/kobu/.config/polybar/launch.sh")
