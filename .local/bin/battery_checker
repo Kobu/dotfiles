@@ -7,6 +7,11 @@ else
   BAT=$1 # allow to pass an argument for easier debugging
 fi
 
+if ! [[ $BAT =~ ^[0-9]+$ ]]; then
+  dunstify -h string:x-dunst-stack-tag:battery-error  "Failed to query battery info" "acpi -b output:\n$(acpi -b)"
+  exit 1
+fi
+
 STATE_FILE="/home/kobu/.local/state"
 # Sets severity of battery level:
   # critical -> 0
