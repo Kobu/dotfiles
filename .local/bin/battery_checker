@@ -25,7 +25,7 @@ elif [ $BAT -le 15 ]; then
   CURRENT=1
 elif [ $BAT -le 50 ]; then
   CURRENT=2
-elif [ $BAT -eq 100 ]; then
+elif [ $BAT -ge 99 ]; then
   CURRENT=3
 else
   CURRENT=4 # this will never cause a notification
