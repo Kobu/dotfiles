@@ -1,6 +1,16 @@
 require('plugins')
 require "user.options"
+local configs = require'nvim-treesitter.configs'
 
+configs.setup {
+ensure_installed = {"c", "lua", "python", "javascript"} , -- Only use parsers that are maintained
+highlight = { -- enable highlighting
+  enable = true,
+},
+indent = {
+  enable = true,
+}
+}
 --vim.opt.foldmethod = "expr"
 --vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
