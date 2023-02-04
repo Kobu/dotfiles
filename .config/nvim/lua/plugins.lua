@@ -5,4 +5,5 @@ return require("packer").startup(function()
 		run = ":TSUpdate",
 	})
 	use("neovim/nvim-lspconfig")
+	use("williamboman/nvim-lsp-installer")
 end)
