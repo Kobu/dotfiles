@@ -6,3 +6,11 @@ keymap("n", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
+
+
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+
