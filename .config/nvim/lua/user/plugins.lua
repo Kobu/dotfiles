@@ -37,5 +37,7 @@ return packer.startup(function(use)
   use "folke/tokyonight.nvim"
   use "L3MON4D3/LuaSnip"
   use "windwp/nvim-autopairs"
-  use "EdenEast/nightfox.nvim"
+
+  use "numToStr/Comment.nvim"
+  use "kyazdani42/nvim-tree.lua"
 end)
