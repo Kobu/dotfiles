@@ -12,8 +12,6 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 -- comment out current line a go to next line
 vim.keymap.set("n", "<C-_>",
   function()
