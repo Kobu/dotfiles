@@ -7,7 +7,7 @@ vim.keymap.set("n", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
+-- indent blocks selected in visual mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
