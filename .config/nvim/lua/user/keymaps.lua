@@ -23,3 +23,4 @@ vim.keymap.set("n", "<C-_>",
 vim.keymap.set("v", "<C-_>",
   "<ESC><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>")
 
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
