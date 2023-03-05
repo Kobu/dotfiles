@@ -43,5 +43,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs"
 
   use "numToStr/Comment.nvim"
+  use "glepnir/dashboard-nvim"
+
   use "kyazdani42/nvim-tree.lua"
 end)
