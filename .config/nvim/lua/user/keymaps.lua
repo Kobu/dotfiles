@@ -23,4 +23,9 @@ vim.keymap.set("n", "<C-_>",
 vim.keymap.set("v", "<C-_>",
   "<ESC><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>")
 
+-- nvimtree keymaps
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<C-n>", ":NvimTreeFocus<CR>", opts)
+-- "r" => rename file
+-- "d" => delete file
+-- "a" => create file
