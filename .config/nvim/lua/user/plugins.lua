@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
-  use "glepnir/dashboard-nvim"
+  use "goolord/alpha-nvim"
 
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
