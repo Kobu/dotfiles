@@ -40,6 +40,7 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip"
 
   use "folke/tokyonight.nvim"
+  use "p00f/nvim-ts-rainbow"
 
   use "windwp/nvim-autopairs"
 
