@@ -29,3 +29,7 @@ keymap("n", "<C-n>", ":NvimTreeFocus<CR>", opts)
 -- "r" => rename file
 -- "d" => delete file
 -- "a" => create file
+
+keymap("n", "L", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "H", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "B", ":Bdelete<CR>", opts)
