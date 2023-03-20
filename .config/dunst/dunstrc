@@ -354,7 +354,6 @@
   foreground = "#5B8234"
   background = "#191311"
   highlight = "#5B8234"
-  timeout = 5
 
 [battery-error]
   stack_tag = "battery-error"
