@@ -293,16 +293,13 @@
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
 
-
 [urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
+    background = "#191311"
     foreground = "#888888"
     timeout = 10
 
 [urgency_normal]
-    background = "#285577"
+    background = "#191311"
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
@@ -318,11 +315,16 @@
 
 [audio-setting]
     stack_tag = "audio"
-    background = "#285577"
+    frame_color = "#5B8234"
+    foreground = "#5B8234"
+    highlight = "#5B8234"
     timeout = 3
 
 [brightness-setting]
     stack_tag = "brightness"
+    frame_color = "#5B8234"
+    foreground = "#5B8234"
+    highlight = "#5B8234"
     timeout = 3
 
 [battery-critical]
