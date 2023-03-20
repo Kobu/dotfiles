@@ -24,6 +24,11 @@ alias grep='grep --color -n'
 # alias for better handling of dotfile
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# function to create a directory and cd into it
+mkcd(){
+  mkdir $1 && cd $1
+}
+
 # f"{time} [kobu@arch: {PWD}]"" 
 PS1=' \A \[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\] '
 
