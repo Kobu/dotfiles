@@ -109,8 +109,6 @@ awful.mouse.append_global_mousebindings({
 
 -- General Awesome keys
 awful.keyboard.append_global_keybindings({
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
@@ -376,6 +374,9 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey,           }, "f", function ()
               awful.util.spawn_with_shell("firefox") end,
             {description = "run firefox", group = "launcher"}),
+    awful.key({ modkey,           }, "s", function ()
+              awful.util.spawn_with_shell("flameshot gui") end,
+            {description = "screenshot", group = "launcher"}),
 })
 
 awful.spawn.with_shell("/home/kobu/.config/polybar/launch.sh")
