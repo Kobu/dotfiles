@@ -367,10 +367,10 @@ awful.keyboard.append_global_keybindings({
               {description = "decrease volume", group = "audio"}),
     awful.key({ modkey,           }, "Left", function ()
                 awful.util.spawn_with_shell("~/.local/bin/brightness_changer down") end,
-              {description = "view previous", group = "tag"}),
+              {description = "decrease brightness", group = "tag"}),
     awful.key({ modkey,           }, "Right", function ()
                 awful.util.spawn_with_shell("~/.local/bin/brightness_changer up") end,
-              {description = "view previous", group = "tag"}),
+              {description = "increase brightness", group = "tag"}),
     awful.key({ modkey,           }, "f", function ()
               awful.util.spawn_with_shell("firefox") end,
             {description = "run firefox", group = "launcher"}),
