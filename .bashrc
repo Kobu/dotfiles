@@ -83,3 +83,6 @@ export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 
 # rustup: .rushtup
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+
+# used by gpg to work correctly
+export GPG_TTY=$(tty)
