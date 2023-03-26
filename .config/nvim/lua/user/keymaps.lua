@@ -15,13 +15,13 @@ keymap("v", ">", ">gv", opts)
 -- comment out current line a go to next line
 vim.keymap.set("n", "<C-_>",
   function()
-    require("Comment.api").toggle_current_linewise()
+    require("Comment.api").toggle.linewise()
     vim.cmd('+1')
   end
 )
 -- comment out highlighted block
 vim.keymap.set("v", "<C-_>",
-  "<ESC><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>")
+  "<ESC><cmd>lua require('Comment.api').toggle.linewise_op(vim.fn.visualmode())<CR>")
 
 -- nvimtree keymaps
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)

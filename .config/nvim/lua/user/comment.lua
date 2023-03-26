@@ -1,5 +1,6 @@
-local status_ok, comment = pcall(require, "Comment")
+local status_ok, comment = pcall(require, "nvim_comment")
 if not status_ok then
+  print("not loeaded")
   return
 end
 
