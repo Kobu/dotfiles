@@ -57,4 +57,5 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
 
   use "weirongxu/plantuml-previewer.vim"
+  use "tyru/open-browser.vim"
 end)
