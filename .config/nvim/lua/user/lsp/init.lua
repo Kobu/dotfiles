@@ -14,6 +14,10 @@ lsp_installer.setup({
   ensure_installed = servers
 })
 
+local handlers =  {
+  ["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = "rounded"}),
+  ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = "double" }),
+}
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local on_attach = function()
@@ -30,6 +34,7 @@ for lang, server in pairs(servers) do
 	local opts = {
 		on_attach = on_attach,
 		capabilities = capabilities,
+    handlers = handlers,
 	}
 
 	local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. lang)
