@@ -8,6 +8,7 @@ local lspconfig = require("lspconfig")
 local servers = {
   lua = "sumneko_lua",
   python = "pyright",
+  c = "clangd",
 }
 
 lsp_installer.setup({
