@@ -10,6 +10,7 @@ local servers = {
   python = "pyright",
   c = "clangd",
   typescript = "tsserver",
+  javascript = "tsserver",
 }
 
 lsp_installer.setup({
