@@ -9,6 +9,7 @@ local servers = {
   lua = "sumneko_lua",
   python = "pyright",
   c = "clangd",
+  typescript = "tsserver",
 }
 
 lsp_installer.setup({
