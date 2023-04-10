@@ -11,6 +11,7 @@ local servers = {
   c = "clangd",
   typescript = "tsserver",
   javascript = "tsserver",
+  css = "cssls",
 }
 
 lsp_installer.setup({
