@@ -11,6 +11,7 @@ local servers = {
   c = "clangd",
   typescript = "tsserver",
   javascript = "tsserver",
+  html = "html",
   css = "cssls",
 }
 
