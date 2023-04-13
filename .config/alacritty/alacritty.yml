@@ -14,6 +14,7 @@ env:
 draw_bold_text_with_bright_color: true
 
 window:
+  decorations_theme_variant: plasma
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -80,7 +81,6 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
-  gtk_theme_variant: plasma
 # Colors (Material Theme)
 colors:
   # Default colors
@@ -119,4 +119,6 @@ colors:
     #cyan:    '0x35434d'
     #white:   '0xffffff'
 font:
-    size: 6.5
+  size: 6.5
+  normal:
+    family: JetBrains Mono
