@@ -380,6 +380,6 @@ awful.keyboard.append_global_keybindings({
 })
 
 awful.spawn.with_shell("/home/kobu/.config/polybar/launch.sh")
-awful.spawn.with_shell("picom --experimental-backends")
+awful.spawn.with_shell("picom")
 awful.spawn.with_shell("/usr/bin/dunst")
 beautiful.useless_gap = 6
