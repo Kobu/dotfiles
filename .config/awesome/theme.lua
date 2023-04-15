@@ -31,7 +31,7 @@ theme.fg_minimize   = theme.bg_normal
 
 theme.useless_gap   = dpi(6)
 theme.border_width  = dpi(2)
-theme.border_color_normal = xrdb.color0
+theme.border_color_normal ="#00FFFF"
 theme.border_color_active = "#cb65d6" --theme.bg_focus
 theme.border_color_marked = xrdb.color10
 
