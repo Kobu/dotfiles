@@ -59,4 +59,7 @@ return packer.startup(function(use)
   use "weirongxu/plantuml-previewer.vim"
   use "tyru/open-browser.vim"
   use "aklt/plantuml-syntax"
+
+  use "nvim-lualine/lualine.nvim"
+  use "previm/previm"
 end)
