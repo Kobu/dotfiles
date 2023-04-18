@@ -33,3 +33,6 @@ keymap("n", "<C-n>", ":NvimTreeFocus<CR>", opts)
 keymap("n", "L", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "H", ":BufferLineCyclePrev<CR>", opts)
 keymap("n", "B", ":Bdelete<CR>", opts)
+
+keymap("n", "<C-l>", ":source $MYVIMRC<CR>", opts)
+
