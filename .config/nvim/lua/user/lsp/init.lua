@@ -13,6 +13,7 @@ local servers = {
   javascript = "tsserver",
   html = "html",
   css = "cssls",
+  csharp = "omnisharp"
 }
 
 lsp_installer.setup({
