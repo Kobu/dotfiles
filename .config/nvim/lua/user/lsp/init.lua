@@ -13,6 +13,7 @@ local servers = {
   javascript = "tsserver",
   html = "html",
   css = "cssls",
+  markdown = "marksman",
   csharp = "omnisharp"
 }
 
