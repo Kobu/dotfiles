@@ -379,6 +379,14 @@ awful.keyboard.append_global_keybindings({
             {description = "screenshot", group = "launcher"}),
 })
 
+-- Make polybar unfocusable
+awful.rules.rules = {
+    {
+        rule_any = { class = {"Polybar"}},
+        properties = { focusable = false }
+    }
+}
+
 awful.spawn.with_shell("/home/kobu/.config/polybar/launch.sh")
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("/usr/bin/dunst")
