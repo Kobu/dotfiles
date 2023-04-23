@@ -96,15 +96,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
     awful.tag({ "work", "docs", "result", "maintanence", "offtopic"}, s, awful.layout.layouts[1])
 end)
 
--- }}}
--- {{{ Mouse bindings
-awful.mouse.append_global_mousebindings({
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewprev),
-    awful.button({ }, 5, awful.tag.viewnext),
-})
--- }}}
-
 -- {{{ Key bindings
 
 -- General Awesome keys
