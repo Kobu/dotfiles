@@ -14,7 +14,8 @@ local servers = {
   html = "html",
   css = "cssls",
   markdown = "marksman",
-  csharp = "omnisharp"
+  csharp = "omnisharp",
+  haskell = "hls",
 }
 
 lsp_installer.setup({
