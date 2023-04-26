@@ -86,3 +86,6 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 # used by gpg to work correctly
 export GPG_TTY=$(tty)
+
+# ghcup: used by nvim LSP to correctly setup haskell
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
