@@ -8,9 +8,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- indent blocks selected in visual mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
-
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- comment out current line a go to next line
 vim.keymap.set("n", "<C-_>",
