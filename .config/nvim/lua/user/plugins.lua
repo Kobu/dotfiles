@@ -39,6 +39,11 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path"
   use "L3MON4D3/LuaSnip"
 
+  use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.1',
+      requires = { {'nvim-lua/plenary.nvim'} }
+        }
+
   use "folke/tokyonight.nvim"
   use "p00f/nvim-ts-rainbow"
   use "norcalli/nvim-colorizer.lua"
