@@ -35,3 +35,4 @@ keymap("n", "B", ":Bdelete<CR>", opts)
 
 keymap("n", "<C-l>", ":source $MYVIMRC<CR>", opts)
 
+keymap("n", "gf", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
