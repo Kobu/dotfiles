@@ -6,7 +6,7 @@ end
 local lspconfig = require("lspconfig")
 
 local servers = {
-  lua = "sumneko_lua",
+  lua = "lua_ls",
   python = "pyright",
   c = "clangd",
   typescript = "tsserver",
