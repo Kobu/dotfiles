@@ -27,7 +27,7 @@ local handlers =  {
   ["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = "rounded"}),
   ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = "double" }),
 }
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local on_attach = function()
   vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
