@@ -29,8 +29,16 @@ mkcd(){
   mkdir $1 && cd $1
 }
 
-# f"{time} [kobu@arch: {PWD}]"" 
-PS1=' \A \[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\] '
+git_branch() {
+     if git status &> /dev/null ; then
+         echo -e ':\e[0;35m'$(git branch --show-current)'\e[m'
+    fi
+
+    # echo ":" $(git branch --show-curemt 2> /dev/null)
+}
+
+# f"{time} [kobu@arch:{PWD}]"" 
+PS1=' \A \[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]$(git_branch)\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\] '
 
 # run fastfetch at every terminal open
 fastfetch
