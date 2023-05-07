@@ -68,4 +68,8 @@ return packer.startup(function(use)
 
   use "nvim-lualine/lualine.nvim"
   use "previm/previm"
+
+    use {
+  'lewis6991/gitsigns.nvim',
+}
 end)
