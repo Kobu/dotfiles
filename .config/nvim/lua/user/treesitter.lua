@@ -1,6 +1,6 @@
 local configs = require("nvim-treesitter.configs")
 configs.setup {
-  ensure_installed = {"c", "lua", "python", "javascript", "haskell"},
+  ensure_installed = {"c", "lua", "python", "javascript", "haskell", "prisma"},
   sync_install = false,
   highlight = {
     enable = true,

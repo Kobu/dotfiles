@@ -16,7 +16,8 @@ local servers = {
   markdown = "marksman",
   csharp = "omnisharp",
   haskell = "hls",
-  xml = "lemminx"
+  xml = "lemminx",
+  prisma = "prismals",
 }
 
 lsp_installer.setup({
