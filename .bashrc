@@ -24,6 +24,10 @@ alias grep='grep --color -n'
 # alias for better handling of dotfile
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# aliases for easier copying/pasting to system clipboard
+alias c="xclip -selection clipboard"
+alias p="xclip -selection clipboard -o"
+
 # function to create a directory and cd into it
 mkcd(){
   mkdir $1 && cd $1
