@@ -14,7 +14,7 @@ env:
 draw_bold_text_with_bright_color: true
 
 window:
-  decorations_theme_variant: plasma
+  decorations_theme_variant: Dark
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
