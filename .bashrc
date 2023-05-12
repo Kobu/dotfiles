@@ -51,6 +51,8 @@ fastfetch
 export MUNI=/home/kobu/muni
 # export current semster
 export CURENT_SEMESTER="$MUNI/4sem"
+# alias for cd-ing to the folder of the current semester
+alias semester='cd $CURENT_SEMESTER'
 
 export PATH="$PATH:/home/kobu/.local/bin"
 
