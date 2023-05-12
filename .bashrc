@@ -49,6 +49,8 @@ fastfetch
 
 # make MUNI directory globally available
 export MUNI=/home/kobu/muni
+# export current semster
+export CURENT_SEMESTER="$MUNI/4sem"
 
 export PATH="$PATH:/home/kobu/.local/bin"
 
