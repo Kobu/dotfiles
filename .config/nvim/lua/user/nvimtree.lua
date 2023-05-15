@@ -10,7 +10,7 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-nvim_tree.setup {
+nvim_tree.setup({
   disable_netrw = true,
   hijack_cursor = true,
   update_cwd = true,
@@ -34,8 +34,8 @@ nvim_tree.setup {
     mappings = {
       custom_only = false,
       list = {
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
+        { key = "h", cb = tree_cb("close_node") },
+        { key = "v", cb = tree_cb("vsplit") },
       },
     },
     number = false,
@@ -66,7 +66,7 @@ nvim_tree.setup {
           deleted = "",
           untracked = "U",
           ignored = "◌",
-          },
+        },
         folder = {
           default = "",
           open = "",
@@ -74,8 +74,7 @@ nvim_tree.setup {
           empty_open = "",
           symlink = "",
         },
-      }
+      },
     },
-  }
-}
-
+  },
+})
