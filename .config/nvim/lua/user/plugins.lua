@@ -68,4 +68,5 @@ return packer.startup(function(use)
   use("previm/previm")
 
   use("lewis6991/gitsigns.nvim")
+  use("rcarriga/nvim-notify")
 end)
