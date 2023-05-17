@@ -47,7 +47,6 @@ return packer.startup(function(use)
   use("folke/tokyonight.nvim")
   use("p00f/nvim-ts-rainbow")
   use("norcalli/nvim-colorizer.lua")
-  use("andweeb/presence.nvim")
 
   use("windwp/nvim-autopairs")
 
