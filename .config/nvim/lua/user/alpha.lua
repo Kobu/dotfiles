@@ -1,9 +1,13 @@
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
+local alpha = load_plugin("alpha")
+if not alpha then
   return
 end
 
-local dashboard = require("alpha.themes.dashboard")
+local dashboard = load_plugin("alpha.themes.dashboard")
+if not dashboard then
+    return
+end
+
 dashboard.section.header.val = {
   [[                               __                ]],
   [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],

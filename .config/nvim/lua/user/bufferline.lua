@@ -1,5 +1,5 @@
-local status_ok, bufferline = pcall(require, "bufferline")
-if not status_ok then
+local bufferline = load_plugin("bufferline")
+if not bufferline then
   return
 end
 

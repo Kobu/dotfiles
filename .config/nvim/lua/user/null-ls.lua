@@ -1,5 +1,5 @@
-local null_ls_status_ok, null_ls = pcall(require, "null-ls")
-if not null_ls_status_ok then
+local null_ls = load_plugin("null-ls")
+if not null_ls then
   return
 end
 

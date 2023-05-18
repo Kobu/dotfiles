@@ -1,6 +1,5 @@
-local status_ok, comment = pcall(require, "nvim_comment")
-if not status_ok then
-  print("not loeaded")
+local comment = load_plugin("Comment")
+if not comment then
   return
 end
 

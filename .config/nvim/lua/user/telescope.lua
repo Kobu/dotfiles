@@ -1,18 +1,31 @@
-local builtin = require("telescope.builtin")
+local telescope = load_plugin("telescope")
+if not telescope then
+    return
+end
+
+local builtin = load_plugin("telescope.builtin")
+if not builtin then
+    return
+end
+local actions = load_plugin("telescope.actions")
+
+if not actions then
+    return
+end
+
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
-local actions = require("telescope.actions")
 
-require("telescope").setup({
-  defaults = {
-    mappings = {
-      i = {
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous,
-      },
+telescope.setup({
+    defaults = {
+        mappings = {
+            i = {
+                ["<C-j>"] = actions.move_selection_next,
+                ["<C-k>"] = actions.move_selection_previous,
+            },
+        },
     },
-  },
 })

@@ -1,5 +1,9 @@
-local configs = require("nvim-treesitter.configs")
-configs.setup({
+local treesitter_config = load_plugin("nvim-treesitter.configs")
+if not treesitter_config then
+  return
+end
+
+treesitter_config.setup({
   ensure_installed = { "c", "lua", "python", "javascript", "haskell", "prisma", "typescript" },
   sync_install = false,
   highlight = {

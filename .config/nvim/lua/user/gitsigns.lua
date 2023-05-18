@@ -1,5 +1,5 @@
-local status_ok, gitsigns = pcall(require, "gitsigns")
-if not status_ok then
+local gitsigns = load_plugin("gitsigns")
+if not gitsigns then
   return
 end
 

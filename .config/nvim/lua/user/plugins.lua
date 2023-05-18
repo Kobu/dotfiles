@@ -9,7 +9,7 @@ vim.cmd([[
 -- return if packer didnt load correctly
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  -- put notification here
+  vim.notify("Error loading packer!", "error")
   return
 end
 

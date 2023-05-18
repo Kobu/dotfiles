@@ -1,6 +1,5 @@
--- Setup nvim-cmp.
-local status_ok, npairs = pcall(require, "nvim-autopairs")
-if not status_ok then
+local npairs = load_plugin("nvim-autopairs")
+if not npairs then
   return
 end
 

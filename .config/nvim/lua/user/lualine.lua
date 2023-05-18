@@ -1,3 +1,8 @@
+local lualine = load_plugin("lualine")
+if not lualine then
+  return
+end
+
 local function lines()
   return vim.api.nvim_buf_line_count(0) .. " lines"
 end
