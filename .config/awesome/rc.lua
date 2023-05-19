@@ -386,6 +386,9 @@ awful.keyboard.append_global_keybindings({
   awful.key({ modkey }, "f", function()
     awful.util.spawn_with_shell("firefox")
   end, { description = "run firefox", group = "launcher" }),
+  awful.key({ modkey }, "o", function()
+    awful.util.spawn_with_shell("obsidian")
+  end, { description = "run obsidian", group = "launcher" }),
   awful.key({ modkey }, "s", function()
     awful.util.spawn_with_shell("flameshot gui")
   end, { description = "screenshot", group = "launcher" }),
