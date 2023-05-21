@@ -20,4 +20,12 @@ treesitter_config.setup({
     extended_mode = true,
     max_file_lines = nil,
   },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<space>ts",
+      node_incremental = "<space>to",
+      node_decremental = "<space>ti",
+    },
+  },
 })
