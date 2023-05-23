@@ -4,7 +4,19 @@ if not treesitter_config then
 end
 
 treesitter_config.setup({
-  ensure_installed = { "c", "lua", "python", "javascript", "haskell", "prisma", "typescript" },
+  ensure_installed = {
+    "c",
+    "lua",
+    "python",
+    "javascript",
+    "haskell",
+    "prisma",
+    "typescript",
+    "html",
+    "css",
+    "tsx",
+    "jsx",
+  },
   sync_install = false,
   highlight = {
     enable = true,
