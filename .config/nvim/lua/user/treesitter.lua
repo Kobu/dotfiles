@@ -15,7 +15,6 @@ treesitter_config.setup({
     "html",
     "css",
     "tsx",
-    "jsx",
   },
   sync_install = false,
   highlight = {
