@@ -54,12 +54,13 @@ export CURENT_SEMESTER="$MUNI/4sem"
 # alias for cd-ing to the folder of the current semester
 alias semester='cd $CURENT_SEMESTER'
 
-export PATH="$PATH:/home/kobu/.local/bin"
+# make every course file in the currect semester globally available
+for el in $CURENT_SEMESTER/*; do
+        alias "$(basename $el)"="cd $el"
+done
 
-# make every file in FIMUNI folder globally available
-# for el in $(ls $MUNI); do
-# 	export $(echo $el)=$MUNI/$el
-# done
+
+export PATH="$PATH:/home/kobu/.local/bin"
 
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_DATA_HOME="$HOME/.local/share"
