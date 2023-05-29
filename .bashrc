@@ -106,3 +106,6 @@ export GPG_TTY=$(tty)
 
 # ghcup: used by nvim LSP to correctly setup haskell
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+
+# postgresql: .psql_history
+export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
