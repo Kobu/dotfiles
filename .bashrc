@@ -112,3 +112,6 @@ export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 
 # nodejs: .node_relp_history
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+
+# ghcup: .ghcup
+export GHCUP_USE_XDG_DIRS=true
