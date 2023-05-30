@@ -115,3 +115,7 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
 # ghcup: .ghcup
 export GHCUP_USE_XDG_DIRS=true
+
+# cabal: .cabal
+export CABAL_CONFIG="$XDG_CONFIG_HOME"/cabal/config
+export CABAL_DIR="$XDG_DATA_HOME"/cabal
