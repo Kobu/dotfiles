@@ -119,3 +119,6 @@ export GHCUP_USE_XDG_DIRS=true
 # cabal: .cabal
 export CABAL_CONFIG="$XDG_CONFIG_HOME"/cabal/config
 export CABAL_DIR="$XDG_DATA_HOME"/cabal
+
+# bash: .bash_history
+export HISTFILE="${XDG_STATE_HOME}"/bash/history
