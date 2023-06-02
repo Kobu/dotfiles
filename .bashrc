@@ -41,8 +41,25 @@ git_branch() {
     # echo ":" $(git branch --show-curemt 2> /dev/null)
 }
 
+# show currently stopped jobs next to the command prompt
+cur_jobs () {
+    if [ ! -z "$(jobs)" ] ; then
+        echo -n ' ('
+
+        # 1. print all currently paused jobs
+        # 2. get names of the paused jobs and add a space at the end
+        # 3. replace newlines with commas
+        # 4. ignore last two chars - a joining comma and a space
+        jobs -s \
+            | sed "s/.*Stopped *\(.*\)/\1 /"  \
+            | tr  '\n' ',' \
+            | head -c -2
+
+        echo -n ')'
+    fi
+}
 # f"{time} [kobu@arch:{PWD}]"" 
-PS1=' \A \[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]$(git_branch)\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\] '
+PS1=' \A \[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]$(git_branch)\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\]$(cur_jobs) '
 
 # run fastfetch at every terminal open
 fastfetch
