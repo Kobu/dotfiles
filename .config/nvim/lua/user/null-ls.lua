@@ -11,5 +11,6 @@ null_ls.setup({
     formatting.black.with({ extra_args = { "--fast" } }),
     formatting.xmlformat,
     formatting.stylua,
+    formatting.eslint_d,
   },
 })
