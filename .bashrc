@@ -67,13 +67,13 @@ fastfetch
 # make MUNI directory globally available
 export MUNI=/home/kobu/muni
 # export current semster
-export CURENT_SEMESTER="$MUNI/4sem"
+export CURENT_SEMESTER="4sem"
 # alias for cd-ing to the folder of the current semester
-alias semester='cd $CURENT_SEMESTER'
+alias semester='cd $MUNI/$CURENT_SEMESTER'
 
 # make every course file in the currect semester globally available
-for el in $CURENT_SEMESTER/*; do
-        alias "$(basename $el)"="cd $el"
+for course in $MUNI/$CURENT_SEMESTER/*; do
+    alias "$(basename $course)"="cd $course"
 done
 
 
