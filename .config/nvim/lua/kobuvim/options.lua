@@ -13,3 +13,6 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.termguicolors = true
 vim.g.mapleader = " "
+
+-- keep signcolumn visible to avoid LSP "stutter" on completion
+vim.opt.signcolumn = "yes"
