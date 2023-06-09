@@ -3,6 +3,11 @@ if not status_ok then
   return
 end
 
+local signature_status_ok, lsp_signature = pcall(require, "lsp_signature")
+if not signature_status_ok then
+  return
+end
+
 local lspconfig = require("lspconfig")
 
 local servers = {
@@ -26,11 +31,11 @@ lsp_installer.setup({
 
 local handlers = {
   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
-  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "double" }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local on_attach = function()
+local on_attach = function(_, bufnr)
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
   vim.keymap.set("n", "R", vim.lsp.buf.rename, { buffer = 0 })
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
@@ -38,6 +43,15 @@ local on_attach = function()
   vim.keymap.set("n", "gp", vim.diagnostic.goto_prev)
   vim.keymap.set("n", "gn", vim.diagnostic.goto_next)
   vim.keymap.set("n", "ga", vim.lsp.buf.code_action, { buffer = 0 })
+  lsp_signature.on_attach({
+    toggle_key = "<C-h>",
+    doc_lines = 0,
+    hint_enable = false,
+    bind = true,
+    handler_opts = {
+      border = "rounded",
+    },
+  }, bufnr)
 end
 
 for lang, server in pairs(servers) do
