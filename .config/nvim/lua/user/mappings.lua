@@ -1,5 +1,7 @@
 return {
   n = {
+    ["<leader>y"] = { cmd = '"+y', desc = "Yank to system clipboard" },
+    ["<leader>Y"] = { cmd = '"+Y', desc = "Yank to system clipboard" },
     ["<Space>"] = { cmd = "<Nop>", desc = "Reserve space as leader keymap" },
     ["<C-_>"] = {
       cmd = function()
@@ -27,5 +29,6 @@ return {
       cmd = "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
       desc = "Comment out highlighted text",
     },
+    ["<leader>y"] = { cmd = '"+y', desc = "Yank to system clipboard" },
   },
 }
