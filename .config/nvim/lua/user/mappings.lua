@@ -31,4 +31,8 @@ return {
     },
     ["<leader>y"] = { cmd = '"+y', desc = "Yank to system clipboard" },
   },
+  x = {
+    ["p"] = { cmd = '"_dp', desc = "Paste the current buffer, but dont override the clipboard" },
+    ["<leader>p"] = { cmd = "p", desc = "Paste current buffer and override the clipboard" },
+  },
 }
