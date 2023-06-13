@@ -44,7 +44,7 @@ return packer.startup(function(use)
     requires = { { "nvim-lua/plenary.nvim" } },
   })
 
-  use("folke/tokyonight.nvim")
+  use("shaunsingh/moonlight.nvim")
   use("p00f/nvim-ts-rainbow")
   use("norcalli/nvim-colorizer.lua")
 
