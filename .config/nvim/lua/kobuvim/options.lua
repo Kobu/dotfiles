@@ -16,3 +16,6 @@ vim.g.mapleader = " "
 
 -- keep signcolumn visible to avoid LSP "stutter" on completion
 vim.opt.signcolumn = "yes"
+
+-- delete tildas after EOFs
+vim.opt.fcs='eob: '
