@@ -83,6 +83,12 @@ tag.connect_signal("request::default_layouts", function()
 end)
 -- }}}
 
+client.connect_signal("request::manage", function(c)
+    c.shape = function(cr, w, h)
+        gears.shape.rounded_rect(cr, w, h, 20)
+    end
+end)
+
 -- {{{ Wallpaper
 screen.connect_signal("request::wallpaper", function(s)
   awful.wallpaper({

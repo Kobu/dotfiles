@@ -28,11 +28,18 @@ theme.fg_normal = xrdb.foreground
 theme.fg_focus = theme.bg_normal
 theme.fg_urgent = theme.bg_normal
 theme.fg_minimize = theme.bg_normal
+--[[ pink = #D97E96 ]]
+--[[ magenta = #A36584 ]]
+--[[ purple = #635373 ]]
+--[[ blue = #496886 ]]
+--[[ slate = #152B42 ]]
+--[[ gray = #1A2133 ]]
 
 theme.useless_gap = dpi(6)
 theme.border_width = dpi(2)
-theme.border_color_normal = "#00FFFF"
-theme.border_color_active = "#cb65d6" --theme.bg_focus
+--[[ theme.border_color_normal = "#193241" ]]
+theme.border_color_normal = "#011826"
+theme.border_color_active = "#D97E96" --theme.bg_focus
 theme.border_color_marked = xrdb.color10
 
 -- There are other variable sets
@@ -113,7 +120,7 @@ if not is_dark_bg then
   wallpaper_bg, wallpaper_fg = wallpaper_fg, wallpaper_bg
 end
 
-theme.wallpaper = "/home/kobu/.config/awesome/wallpapers/good.png"
+theme.wallpaper = "/home/kobu/.config/awesome/wallpapers/nord.png"
 theme.wallpaper_bg = wallpaper_bg
 
 -- Set different colors for urgent notifications.
