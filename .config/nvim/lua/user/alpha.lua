@@ -5,7 +5,7 @@ end
 
 local dashboard = load_plugin("alpha.themes.dashboard")
 if not dashboard then
-    return
+  return
 end
 
 dashboard.section.header.val = {
@@ -19,6 +19,7 @@ dashboard.section.header.val = {
 
 dashboard.section.buttons.val = {
   dashboard.button("f", "拾 FI Muni", ":cd ~/fimuni | :NvimTreeFocus<CR>"),
+  dashboard.button("b", "  Edit .bashrc", ":e ~/.bashrc <CR>"),
   dashboard.button("d", "  Dotfiles", ":cd ~/.config | :NvimTreeFocus<CR>"),
   dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua |:cd ~/.config/nvim/ <CR>"),
   dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
