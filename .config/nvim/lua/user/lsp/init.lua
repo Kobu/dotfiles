@@ -23,6 +23,7 @@ local servers = {
   haskell = "hls",
   xml = "lemminx",
   prisma = "prismals",
+  tailwindcss="tailwindcss"
 }
 
 lsp_installer.setup({
