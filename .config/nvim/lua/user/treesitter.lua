@@ -27,7 +27,7 @@ treesitter_config.setup({
     enable_autocmd = false,
   },
   rainbow = {
-    enable = true,
+    enable = false,
     extended_mode = true,
     max_file_lines = nil,
   },
