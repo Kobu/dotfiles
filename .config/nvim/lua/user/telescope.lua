@@ -26,6 +26,7 @@ vim.keymap.set("n", "<leader>ff", function()
 end, {})
 vim.keymap.set("n", "<leader>r", builtin.lsp_references, {})
 vim.keymap.set("n", "e", builtin.resume, {})
+vim.keymap.set("n", "<leader>td", ":TodoTelescope<CR>", {})
 
 telescope.setup({
   defaults = {
