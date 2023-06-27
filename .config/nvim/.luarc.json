@@ -2,6 +2,7 @@
     "diagnostics.globals": [
         "vim",
         "use",
-        "load_plugin"
+        "load_plugin",
+        "outdated_keymap"
     ]
 }
