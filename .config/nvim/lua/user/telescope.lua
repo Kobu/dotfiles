@@ -24,7 +24,9 @@ vim.keymap.set("n", "<leader>ff", function()
     builtin.find_files()
   end
 end, {})
-vim.keymap.set("n", "<leader>r", builtin.lsp_references, {})
+vim.keymap.set("n", "<leader>r", function ()
+    builtin.lsp_references({jump_type="never"})
+end, {})
 vim.keymap.set("n", "e", builtin.resume, {})
 vim.keymap.set("n", "<leader>td", ":TodoTelescope<CR>", {})
 
