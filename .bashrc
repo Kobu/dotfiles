@@ -28,6 +28,9 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias c="xclip -selection clipboard"
 alias p="xclip -selection clipboard -o"
 
+# cd into the coding folder
+alias coding="cd ~/coding"
+
 # function to create a directory and cd into it
 mkcd(){
   mkdir $1 && cd $1
