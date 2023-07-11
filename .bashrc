@@ -80,6 +80,7 @@ for course in $MUNI/$CURENT_SEMESTER/*; do
 done
 
 
+export EDITOR="nvim"
 export PATH="$PATH:/home/kobu/.local/bin"
 
 export XDG_STATE_HOME="$HOME/.local/state"
