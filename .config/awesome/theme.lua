@@ -18,42 +18,10 @@ local theme = dofile(themes_path .. "default/theme.lua")
 
 theme.font = "sans 8"
 
-theme.bg_normal = xrdb.background
-theme.bg_focus = xrdb.color12
-theme.bg_urgent = xrdb.color9
-theme.bg_minimize = xrdb.color8
-theme.bg_systray = theme.bg_normal
-
-theme.fg_normal = xrdb.foreground
-theme.fg_focus = theme.bg_normal
-theme.fg_urgent = theme.bg_normal
-theme.fg_minimize = theme.bg_normal
---[[ pink = #D97E96 ]]
---[[ magenta = #A36584 ]]
---[[ purple = #635373 ]]
---[[ blue = #496886 ]]
---[[ slate = #152B42 ]]
---[[ gray = #1A2133 ]]
-
 theme.useless_gap = dpi(6)
 theme.border_width = dpi(2)
---[[ theme.border_color_normal = "#193241" ]]
 theme.border_color_normal = "#011826"
 theme.border_color_active = "#D97E96" --theme.bg_focus
-theme.border_color_marked = xrdb.color10
-
--- There are other variable sets
--- overriding the default one when
--- defined, the sets are:
--- taglist_[bg|fg]_[focus|urgent|occupied|empty|volatile]
--- tasklist_[bg|fg]_[focus|urgent]
--- titlebar_[bg|fg]_[normal|focus]
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
--- Example:
---theme.taglist_bg_focus = "#ff0000"
-
-theme.tooltip_fg = theme.fg_normal
-theme.tooltip_bg = theme.bg_normal
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
