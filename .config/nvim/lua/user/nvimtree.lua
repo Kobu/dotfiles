@@ -3,12 +3,6 @@ if not nvim_tree then
   return
 end
 
-local nvim_tree_config = load_plugin("nvim-tree.config")
-if not nvim_tree_config then
-  return
-end
-
-local tree_cb = nvim_tree_config.nvim_tree_callback
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
 
@@ -97,9 +91,9 @@ nvim_tree.setup({
   view = {
     width = 30,
     side = "left",
-    mappings = {
-      custom_only = false,
-    },
+    --[[ mappings = { ]]
+      --[[ custom_only = false, ]]
+    --[[ }, ]]
     number = false,
     signcolumn = "yes",
   },
