@@ -27,4 +27,12 @@ gitsigns.setup({
     delay = 1000,
     ignore_whitespace = false,
   },
+
+  vim.keymap.set("n", "ghs", gitsigns.stage_hunk, {}),
+  vim.keymap.set("n", "ghu", gitsigns.undo_stage_hunk, {}),
+  vim.keymap.set("n", "ghv", gitsigns.select_hunk, {}),
+  vim.keymap.set("n", "<C-j>", gitsigns.next_hunk, {}),
+  vim.keymap.set("n", "<C-k>", gitsigns.prev_hunk, {}),
+  vim.keymap.set("n", "ghr", gitsigns.reset_hunk, {}),
+  vim.keymap.set("n", "ghp", gitsigns.preview_hunk_inline, {}),
 })
