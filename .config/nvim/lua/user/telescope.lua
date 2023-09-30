@@ -17,6 +17,11 @@ vim.keymap.set("n", "<leader>aa", builtin.find_files, {})
 vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>ht", builtin.help_tags, {})
 vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
+vim.keymap.set("n", "gl", function()
+  builtin.git_commits({
+    git_command = { "git", "log", "--format=%C(bold blue)%h %C(211)[Date: %as] %C(magenta)[%an] %Creset%s" },
+  })
+end, {})
 vim.keymap.set("n", "<leader>ff", function()
   vim.fn.system("git rev-parse --is-inside-work-tree 2> /dev/null")
   if vim.v.shell_error == 0 then
