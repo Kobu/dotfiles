@@ -21,6 +21,7 @@ return {
       end,
       desc = "Format according to null-ls",
     },
+    ["gb"] = { cmd = ":Git blame<CR>", desc = "Run git blame" },
   },
   v = {
     ["K"] = { cmd = ":m '<-2<CR>gv=gv", desc = "Move highlighted text block up" },
@@ -30,6 +31,7 @@ return {
       desc = "Comment out highlighted text",
     },
     ["<leader>y"] = { cmd = '"+y', desc = "Yank to system clipboard" },
+    ["gb"] = { cmd = ":Git blame<CR>", desc = "Run git blame" },
   },
   x = {
     ["p"] = { cmd = '"_dp', desc = "Paste the current buffer, but dont override the clipboard" },
