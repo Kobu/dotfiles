@@ -4,6 +4,9 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+# launch nowaster at startup
+sh ~/utils/nowaster.sh  &>/dev/null &
+
 # Start X at login
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   prime-offload
