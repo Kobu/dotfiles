@@ -1,5 +1,5 @@
 vim.g.moonlight_borders = true
-require('moonlight').set()
+require("moonlight").set()
 
 vim.cmd("highlight NotifyERRORBorder guifg=#8A1F1F")
 vim.cmd("highlight NotifyWARNBorder guifg=#79491D")
@@ -21,4 +21,3 @@ vim.cmd("highlight link NotifyWARNBody Normal")
 vim.cmd("highlight link NotifyINFOBody Normal")
 vim.cmd("highlight link NotifyDEBUGBody Normal")
 vim.cmd("highlight link NotifyTRACEBody Normal")
-

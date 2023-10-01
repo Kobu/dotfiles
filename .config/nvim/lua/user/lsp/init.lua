@@ -43,7 +43,11 @@ local on_attach = function(_, bufnr)
   vim.keymap.set(
     "n",
     "gr",
-    outdated_keymap({ command = vim.lsp.buf.references, message = "Outdated in favor of telescope", keymap = "<space>r" }),
+    outdated_keymap({
+      command = vim.lsp.buf.references,
+      message = "Outdated in favor of telescope",
+      keymap = "<space>r",
+    }),
     { buffer = 0 }
   )
   vim.keymap.set("n", "gp", vim.diagnostic.goto_prev)
