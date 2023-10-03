@@ -40,16 +40,6 @@ local on_attach = function(_, bufnr)
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
   vim.keymap.set("n", "R", vim.lsp.buf.rename, { buffer = 0 })
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
-  vim.keymap.set(
-    "n",
-    "gr",
-    outdated_keymap({
-      command = vim.lsp.buf.references,
-      message = "Outdated in favor of telescope",
-      keymap = "<space>r",
-    }),
-    { buffer = 0 }
-  )
   vim.keymap.set("n", "gp", vim.diagnostic.goto_prev)
   vim.keymap.set("n", "gn", vim.diagnostic.goto_next)
   vim.keymap.set("n", "ga", vim.lsp.buf.code_action, { buffer = 0 })
