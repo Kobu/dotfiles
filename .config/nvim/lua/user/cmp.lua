@@ -73,6 +73,7 @@ cmp.setup({
       vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
+        nvim_lua= "[nvim]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
@@ -81,7 +82,8 @@ cmp.setup({
     end,
   },
   sources = {
-    { name = "nvim_lsp", max_item_count = 15 },
+    { name = "nvim_lsp", keyword_length = 3, max_item_count = 15 },
+    { name = "nvim_lua" },
     { name = "luasnip", max_item_count = 2 },
     { name = "buffer", max_item_count = 2 },
     { name = "path", max_item_count = 2 },
