@@ -24,7 +24,15 @@ local handlers = {
   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local workspace = {
+        didChangeWatchedFiles = {
+          dynamicRegistration = false
+        }
+      }
 
+capabilities.workspace = workspace
+
+-- buffer = 0 : current buffer
 local on_attach = function(_, bufnr)
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
   vim.keymap.set("n", "R", vim.lsp.buf.rename, { buffer = 0 })
