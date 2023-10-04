@@ -8,23 +8,12 @@ if not signature_status_ok then
   return
 end
 
-local lspconfig = require("lspconfig")
+local servers_ok, servers = pcall(require, "user.lsp.servers")
+if not servers_ok then
+    return
+end
 
-local servers = {
-  lua = "lua_ls",
-  python = "pyright",
-  c = "clangd",
-  typescript = "tsserver",
-  javascript = "tsserver",
-  html = "emmet_ls",
-  css = "cssls",
-  markdown = "marksman",
-  csharp = "omnisharp",
-  haskell = "hls",
-  xml = "lemminx",
-  prisma = "prismals",
-  tailwindcss = "tailwindcss",
-}
+local lspconfig = require("lspconfig")
 
 lsp_installer.setup({
   ensure_installed = servers,
