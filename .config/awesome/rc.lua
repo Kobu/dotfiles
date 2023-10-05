@@ -105,7 +105,7 @@ awful.keyboard.append_global_keybindings({
     awful.spawn(terminal)
   end, { description = "open a terminal", group = "launcher" }),
   awful.key({ modkey }, "r", function()
-    awful.util.spawn("dmenu_run")
+    awful.util.spawn("rofi -show run")
   end, { description = "run prompt", group = "launcher" }),
 })
 
