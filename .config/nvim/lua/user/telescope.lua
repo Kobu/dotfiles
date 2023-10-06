@@ -53,6 +53,13 @@ local function getSha()
   vim.notify("Copied " .. sha .. " to clipboard")
 end
 
+local function doRebase(bufnr)
+  local selection = action_state.get_selected_entry()
+  local sha = selection.value
+  actions.smart_send_to_qflist(bufnr)
+  vim.cmd("Git rebase -i " .. sha)
+end
+
 telescope.setup({
   defaults = {
     mappings = {
@@ -71,10 +78,12 @@ telescope.setup({
       },
     },
     git_commits = {
-      attach_mappings = function(_, map)
-        map("i", "<cr>", getSha)
-        return true
-      end,
+      mappings = {
+        i = {
+          ["<cr>"] = getSha,
+          ["R"] = doRebase,
+        },
+      },
     },
   },
 })
