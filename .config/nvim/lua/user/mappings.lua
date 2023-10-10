@@ -3,6 +3,7 @@ return {
     ["<leader>y"] = { cmd = '"+y', desc = "Yank to system clipboard" },
     ["<leader>Y"] = { cmd = '"+Y', desc = "Yank to system clipboard" },
     ["<Space>"] = { cmd = "<Nop>", desc = "Reserve space as leader keymap" },
+    ["Q"] = { cmd = "<Nop>", desc = "Prevent me from having a bad time" },
     ["<C-_>"] = {
       cmd = function()
         require("Comment.api").toggle.linewise()
