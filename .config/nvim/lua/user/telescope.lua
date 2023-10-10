@@ -57,7 +57,7 @@ local function doRebase(bufnr)
   local selection = action_state.get_selected_entry()
   local sha = selection.value
   actions.smart_send_to_qflist(bufnr)
-  vim.cmd("Git rebase -i " .. sha)
+  vim.cmd("Git rebase -i " .. sha .. "^")
 end
 
 telescope.setup({
