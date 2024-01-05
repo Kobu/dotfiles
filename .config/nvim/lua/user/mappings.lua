@@ -23,6 +23,7 @@ return {
       desc = "Format according to null-ls",
     },
     ["gb"] = { cmd = ":Git blame<CR>", desc = "Run git blame" },
+    ["<leader>gc"] = { cmd = ":Git commit<CR>", desc = "Commit" },
   },
   v = {
     ["K"] = { cmd = ":m '<-2<CR>gv=gv", desc = "Move highlighted text block up" },
