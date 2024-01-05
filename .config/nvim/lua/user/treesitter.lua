@@ -18,6 +18,8 @@ treesitter_config.setup({
     "c_sharp",
     "regex",
     "bash",
+    "markdown",
+    "markdown_inline",
   },
   sync_install = false,
   highlight = {
