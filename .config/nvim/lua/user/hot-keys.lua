@@ -63,7 +63,7 @@ function M.picker(opts)
             actions.select_default:replace(function()
                 actions.close(prompt_bufnr)
                 local selection = action_state.get_selected_entry()
-                vim.notify(selection.display_keymap)
+                vim.notify(selection.value)
                 --[[ vim.cmd("call feedkeys('".. selection.exec_keymap .. "')") ]]
             end)
             return true
