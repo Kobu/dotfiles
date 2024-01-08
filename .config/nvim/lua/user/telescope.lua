@@ -30,6 +30,7 @@ vim.keymap.set("n", "<leader>hk", function ()
     hot_keys.picker(require("telescope.themes").get_dropdown{})
 end, {})
 vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
+vim.keymap.set("n", "<leader>gb", builtin.git_branches, {})
 vim.keymap.set("n", "<leader>gi", builtin.lsp_implementations, {})
 vim.keymap.set("n", "gl", function()
   builtin.git_commits({
