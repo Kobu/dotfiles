@@ -12,7 +12,6 @@ return {
       desc = "Comment out currect line",
     },
     ["<leader>e"] = { cmd = ":NvimTreeToggle<CR>", desc = "Toggle NvimTree window" },
-    ["<C-n>"] = { cmd = ":NvimTreeFocus<CR>", desc = "Focus NvimTree window" },
     ["H"] = { cmd = ":BufferLineCyclePrev<CR>", desc = "Cycle to previous buffer" },
     ["L"] = { cmd = ":BufferLineCycleNext<CR>", desc = "Cycle to next buffer" },
     ["B"] = { cmd = ":Bdelete<CR>", desc = "Close current buffer" },
