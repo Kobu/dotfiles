@@ -11,7 +11,6 @@ return {
       end,
       desc = "Comment out currect line",
     },
-    ["<leader>e"] = { cmd = ":NvimTreeToggle<CR>", desc = "Toggle NvimTree window" },
     ["H"] = { cmd = ":BufferLineCyclePrev<CR>", desc = "Cycle to previous buffer" },
     ["L"] = { cmd = ":BufferLineCycleNext<CR>", desc = "Cycle to next buffer" },
     ["B"] = { cmd = ":Bdelete<CR>", desc = "Close current buffer" },
@@ -35,7 +34,7 @@ return {
     ["gb"] = { cmd = ":Git blame<CR>", desc = "Run git blame" },
   },
   x = {
-    ["p"] = { cmd = '"_dp', desc = "Paste the current buffer, but dont override the clipboard" },
+    ["p"] = { cmd = '"_dhp', desc = "Paste the current buffer, but dont override the clipboard" },
     ["<leader>p"] = { cmd = "p", desc = "Paste current buffer and override the clipboard" },
   },
 }
