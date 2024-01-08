@@ -6,21 +6,25 @@ end
 local api = require("nvim-tree.api")
 
 local function on_attach(bufnr)
-  vim.keymap.set("n", "<C-k>", api.node.show_info_popup)
-  vim.keymap.set("n", "<C-v>", api.node.open.vertical)
-  vim.keymap.set("n", "<C-h>", api.node.open.horizontal)
-  vim.keymap.set("n", "a", api.fs.create)
-  vim.keymap.set("n", "d", api.fs.remove)
-  vim.keymap.set("n", "E", api.tree.expand_all)
-  vim.keymap.set("n", "g?", api.tree.toggle_help)
-  vim.keymap.set("n", "H", api.tree.toggle_hidden_filter)
-  vim.keymap.set("n", "I", api.tree.toggle_gitignore_filter)
-  vim.keymap.set("n", "r", api.fs.rename)
-  vim.keymap.set("n", "W", api.tree.collapse_all)
-  vim.keymap.set("n", "y", api.fs.copy.filename)
-  vim.keymap.set("n", "Y", api.fs.copy.relative_path)
-  vim.keymap.set("n", "gy", api.fs.copy.absolute_path)
-  vim.keymap.set("n", "<CR>", api.node.open.edit)
+    local function opts(desc)
+        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    end
+
+    vim.keymap.set("n", "<C-k>", api.node.show_info_popup, opts())
+    vim.keymap.set("n", "<C-v>", api.node.open.vertical, opts())
+    vim.keymap.set("n", "<C-h>", api.node.open.horizontal, opts())
+    vim.keymap.set("n", "a", api.fs.create, opts())
+    vim.keymap.set("n", "d", api.fs.remove, opts())
+    vim.keymap.set("n", "E", api.tree.expand_all, opts())
+    vim.keymap.set("n", "g?", api.tree.toggle_help, opts())
+    vim.keymap.set("n", "H", api.tree.toggle_hidden_filter, opts())
+    vim.keymap.set("n", "I", api.tree.toggle_gitignore_filter, opts())
+    vim.keymap.set("n", "r", api.fs.rename, opts())
+    vim.keymap.set("n", "W", api.tree.collapse_all, opts())
+    vim.keymap.set("n", "y", api.fs.copy.filename, opts())
+    vim.keymap.set("n", "Y", api.fs.copy.relative_path, opts())
+    vim.keymap.set("n", "gy", api.fs.copy.absolute_path, opts())
+    vim.keymap.set("n", "<CR>", api.node.open.edit, opts())
 end
 
 vim.keymap.set("n", "<leader>e", api.tree.toggle)
@@ -33,7 +37,7 @@ vim.keymap.set("n", "<C-f>", function()
 end)
 
 nvim_tree.setup({
-    on_attach= on_attach,
+    on_attach = on_attach,
     disable_netrw = true,
     hijack_cursor = true,
     update_cwd = true,
