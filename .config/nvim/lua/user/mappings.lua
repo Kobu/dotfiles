@@ -14,14 +14,16 @@ return {
     ["H"] = { cmd = ":BufferLineCyclePrev<CR>", desc = "Cycle to previous buffer" },
     ["L"] = { cmd = ":BufferLineCycleNext<CR>", desc = "Cycle to next buffer" },
     ["B"] = { cmd = ":Bdelete<CR>", desc = "Close current buffer" },
-    ["gf"] = {
+    ["sf"] = {
       cmd = function()
         vim.lsp.buf.format()
       end,
       desc = "Format according to null-ls",
     },
-    ["gb"] = { cmd = ":Git blame<CR>", desc = "Run git blame" },
-    ["<leader>gc"] = { cmd = ":Git commit<CR>", desc = "Commit" },
+    ["ga"] = { cmd = ":Git blame<CR>", desc = "Run git blame" },
+    ["gc"] = { cmd = ":Git commit<CR>", desc = "Commit" },
+    ["gp"] = { cmd = ":Git push<CR>", desc = "Git push" },
+    ["gas"] = { cmd = ":Git stash<CR>", desc = "Git push" },
   },
   v = {
     ["K"] = { cmd = ":m '<-2<CR>gv=gv", desc = "Move highlighted text block up" },
