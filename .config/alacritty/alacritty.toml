@@ -1,0 +1,53 @@
+draw_bold_text_with_bright_color = true
+
+[colors.bright]
+black = "0x282c34"
+blue = "0x7cb7ff"
+cyan = "0x00c1e4"
+green = "0x71f79f"
+magenta = "0xc74ded"
+red = "0xed254d"
+white = "0xdcdfe4"
+yellow = "0xf9dc5c"
+
+[colors.normal]
+black = "0x282c34"
+blue = "0x7cb7ff"
+cyan = "0x00c1e4"
+green = "0x71f79f"
+magenta = "0xc74ded"
+red = "0xed254d"
+white = "0xdcdfe4"
+yellow = "0xf9dc5c"
+
+[colors.primary]
+background = "0x161925"
+foreground = "0xc4c7d1"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 6.5
+
+[font.normal]
+family = "JetBrains Mono Nerd Font"
+
+[window]
+decorations = "full"
+decorations_theme_variant = "Dark"
+dynamic_padding = true
+opacity = 0.7
+title = "Alacritty@Garuda"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.dimensions]
+columns = 135
+lines = 35
+
+[window.padding]
+x = 2
+y = 2
