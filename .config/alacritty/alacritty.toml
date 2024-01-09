@@ -1,5 +1,3 @@
-draw_bold_text_with_bright_color = true
-
 [colors.bright]
 black = "0x282c34"
 blue = "0x7cb7ff"
