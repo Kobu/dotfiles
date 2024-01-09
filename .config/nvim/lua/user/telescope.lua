@@ -26,6 +26,7 @@ end
 vim.keymap.set("n", "<leader>aa", builtin.find_files, {})
 vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>ht", builtin.help_tags, {})
+vim.keymap.set("n", "<leader>km", builtin.keymaps, {})
 vim.keymap.set("n", "<leader>hk", function ()
     hot_keys.picker(require("telescope.themes").get_dropdown{})
 end, {})
