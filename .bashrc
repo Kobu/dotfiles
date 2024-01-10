@@ -31,6 +31,11 @@ alias p="xclip -selection clipboard -o"
 # cd into the coding folder
 alias coding="cd ~/coding"
 
+# open nvim in dev mode
+dvim(){
+  XDG_CONFIG_HOME=~/coding/dotfiles/.config/ nvim $1
+}
+
 # function to create a directory and cd into it
 mkcd(){
   mkdir $1 && cd $1
@@ -143,3 +148,4 @@ export CABAL_DIR="$XDG_DATA_HOME"/cabal
 
 # bash: .bash_history
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
+export HISTIGNORE="fg"
