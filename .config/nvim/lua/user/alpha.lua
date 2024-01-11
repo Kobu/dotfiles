@@ -21,7 +21,7 @@ dashboard.section.buttons.val = {
   dashboard.button("f", "拾 FI Muni", ":cd ~/fimuni | :NvimTreeFocus<CR>"),
   dashboard.button("b", "  Edit .bashrc", ":e ~/.bashrc <CR>"),
   dashboard.button("d", "  Dotfiles", ":cd ~/.config | :NvimTreeFocus<CR>"),
-  dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua |:cd ~/.config/nvim/ <CR>"),
+  dashboard.button("c", "  Configuration", ":e ~/coding/dotfiles/.config/nvim/init.lua |:cd ~/coding/dotfiles/.config/nvim/ <CR>"),
   dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 
