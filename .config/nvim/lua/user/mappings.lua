@@ -25,6 +25,7 @@ return {
     ["gp"] = { cmd = ":Git push<CR>", desc = "Git push" },
     ["gas"] = { cmd = ":Git stash<CR>", desc = "Git stash all" },
     ["gap"] = { cmd = ":Git stash pop<CR>", desc = "Git stash pop" },
+    ["git"] = { cmd = ":Git<CR>", desc = "Git" },
   },
   v = {
     ["K"] = { cmd = ":m '<-2<CR>gv=gv", desc = "Move highlighted text block up" },
