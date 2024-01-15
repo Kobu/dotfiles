@@ -48,7 +48,6 @@ capabilities.workspace = workspace
 local on_attach = function(_, bufnr)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
     vim.keymap.set("n", "R", vim.lsp.buf.rename, { buffer = 0 })
-    vim.keymap.set("n", "sd", vim.lsp.buf.definition, { buffer = 0 })
     vim.keymap.set("n", "sk", vim.diagnostic.goto_prev)
     vim.keymap.set("n", "sj", vim.diagnostic.goto_next)
     vim.keymap.set("n", "sa", vim.lsp.buf.code_action, { buffer = 0 })
