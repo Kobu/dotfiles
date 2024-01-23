@@ -149,3 +149,7 @@ export CABAL_DIR="$XDG_DATA_HOME"/cabal
 # bash: .bash_history
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
 export HISTIGNORE="fg"
+
+export BROWSER=wslview
+
+source /usr/share/nvm/init-nvm.sh
