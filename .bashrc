@@ -67,7 +67,7 @@ cur_jobs () {
     fi
 }
 # f"{time} [kobu@arch:{PWD}]"" 
-PS1=' \A \[\e[34m\][\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]$(git_branch)\[\e[34m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\]$(cur_jobs) '
+PS1=' \A \[\e[34m\][\[\e[m\]\[\e[35m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\]:\[\e[36m\]\W\[\e[m\]\[\e[32m\]$(git_branch)\[\e[34m\]]\[\e[m\]\[\e[32;47m\]\[\e[m\]$(cur_jobs)\n\011> '
 
 # run fastfetch at every terminal open
 fastfetch
