@@ -12,6 +12,8 @@ vim.opt.swapfile = false
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.termguicolors = true
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
 vim.g.mapleader = " "
 vim.g.skip_ts_context_commentstring_module = true
 
