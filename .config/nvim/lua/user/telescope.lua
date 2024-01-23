@@ -54,6 +54,15 @@ local live_grep_filters = {
     directories = nil,
 }
 
+vim.keymap.set("v", "<leader>aa", function()
+    local text = vim.getVisualSelection()
+    builtin.find_files({ default_text = text })
+end, {})
+vim.keymap.set("v", "<leader>lg", function()
+    local text = vim.getVisualSelection()
+    builtin.live_grep({ default_text = text })
+end, {})
+
 vim.keymap.set("n", "<leader>aa", builtin.find_files, {})
 vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>ht", builtin.help_tags, {})
