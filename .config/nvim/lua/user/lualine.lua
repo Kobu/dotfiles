@@ -7,7 +7,7 @@ local function lines()
   return vim.api.nvim_buf_line_count(0) .. " lines"
 end
 
-require("lualine").setup({
+lualine.setup({
   options = {
     icons_enabled = true,
     theme = "moonlight",
@@ -29,7 +29,7 @@ require("lualine").setup({
   sections = {
     lualine_a = { "mode" },
     lualine_b = { "branch" },
-    lualine_c = {},
+    lualine_c = {{ "filename", path = 1 }},
     lualine_x = { "filetype" },
     lualine_y = { lines },
     lualine_z = { "diagnostics" },
