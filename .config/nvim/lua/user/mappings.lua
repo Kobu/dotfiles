@@ -27,6 +27,42 @@ return {
     ["gas"] = { cmd = ":Git stash<CR>", desc = "Git stash all" },
     ["gap"] = { cmd = ":Git stash pop<CR>", desc = "Git stash pop" },
     ["git"] = { cmd = ":Git<CR>", desc = "Git" },
+    ["<C-a>"] = {
+      cmd = function()
+        require("harpoon.mark").add_file()
+      end,
+      desc = "Harpoon add file",
+    },
+    ["<C-e>"] = {
+      cmd = function()
+        require("harpoon.ui").toggle_quick_menu()
+      end,
+      desc = "Harpoon toggle menu",
+    },
+    ["<leader>1"] = {
+      cmd = function()
+        require("harpoon.ui").nav_file(1)
+      end,
+      desc = "Harpoon nav file 1",
+    },
+    ["<leader>2"] = {
+      cmd = function()
+        require("harpoon.ui").nav_file(2)
+      end,
+      desc = "Harpoon nav file 2",
+    },
+    ["<leader>3"] = {
+      cmd = function()
+        require("harpoon.ui").nav_file(3)
+      end,
+      desc = "Harpoon nav file 3",
+    },
+    ["<leader>4"] = {
+      cmd = function()
+        require("harpoon.ui").nav_file(4)
+      end,
+      desc = "Harpoon nav file 4",
+    },
   },
   v = {
     ["K"] = { cmd = ":m '<-2<CR>gv=gv", desc = "Move highlighted text block up" },
