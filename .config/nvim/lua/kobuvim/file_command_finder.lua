@@ -36,7 +36,14 @@ end
 
 M.file_command_picker = function(command, opts)
     opts = opts or {}
-    local result = vim.run_command(command, { ignore_stderr = true })
+
+    local result
+    if command == nil then
+        result = {}
+    else
+        result = vim.run_command(command, { ignore_stderr = true })
+    end
+
     return pickers.new(opts, {
         prompt_title = "Command",
         finder = finders.new_table({
@@ -65,5 +72,5 @@ M.file_command_picker = function(command, opts)
 end
 
 vim.keymap.set("n", "<leader>cm", function()
-    M.file_command_picker(""):find()
+    M.file_command_picker():find()
 end, {})

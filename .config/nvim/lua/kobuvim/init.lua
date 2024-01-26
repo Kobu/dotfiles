@@ -2,6 +2,7 @@ require("kobuvim.options")
 local utils = require("kobuvim.utils")
 local user_mappings = require("user.mappings")
 local mappings_helper = require("kobuvim.mappings")
+local _ = require("kobuvim.file_command_finder")
 
 local notify = require("notify")
 notify.setup({
