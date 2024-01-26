@@ -55,8 +55,14 @@ local function parse_command_output(output)
     return list
 end
 
-local function execute_command(command)
-    local handle = io.popen(command)
+local function execute_command(command, opts)
+    local handle
+    if (opts.ignore_stderr == true) then
+        handle = io.popen("( " .. command .. " ) 2>/dev/null")
+    else
+        handle = io.popen(command)
+    end
+
 
     if (handle == nil) then
         print('could not run specified command:' .. command)
@@ -70,6 +76,6 @@ local function execute_command(command)
     return output
 end
 
-function vim.run_command(command)
-    return parse_command_output(execute_command(command))
+function vim.run_command(command, opts)
+    return parse_command_output(execute_command(command, opts))
 end
