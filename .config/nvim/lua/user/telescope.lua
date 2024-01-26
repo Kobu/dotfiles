@@ -47,6 +47,12 @@ local hot_keys = load_plugin("user.hot-keys")
 if not hot_keys then
     return
 end
+
+telescope.load_extension("recent_files")
+vim.keymap.set("n", "<leader>rf", function()
+    telescope.extensions.recent_files.pick()
+end, {})
+
 local live_grep_filters = {
     ---@type nil|string
     extension = nil,
@@ -194,6 +200,12 @@ local my_actions = transform_mod {
 
 
 telescope.setup({
+    extensions = {
+        recent_files = {
+            only_cwd = true
+            -- This extension's options, see below.
+        }
+    },
     defaults = {
         mappings = {
             i = {

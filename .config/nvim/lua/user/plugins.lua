@@ -77,4 +77,5 @@ return packer.startup(function(use)
     requires = { { "nvim-lua/plenary.nvim" } },
   })
   use("ray-x/lsp_signature.nvim")
+  use {"smartpde/telescope-recent-files"}
 end)
