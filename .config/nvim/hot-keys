@@ -10,3 +10,5 @@ gU<selection> to make characters uppercase
 gu<selection> to make characters lowercase
 ~ [v mode] to switch case of every selected character
 ~ [i mode] to switch case character below cursor
+<C-w>| to maximize a window split
+<C-w>= to split windows equally
