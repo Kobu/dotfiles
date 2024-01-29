@@ -61,17 +61,17 @@ local on_attach = function(_, bufnr)
   }, bufnr)
 end
 
-for  _,server in pairs(servers) do
+for _, server in pairs(servers) do
   local opts = {
     on_attach = on_attach,
     capabilities = capabilities,
     handlers = handlers,
   }
 
-    --[[ local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. lang) ]]
-    --[[ if has_custom_opts then ]]
-    --[[ opts = vim.tbl_deep_extend("force", opts, server_custom_opts) ]]
-    --[[ end ]]
+  local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
+  if has_custom_opts then
+    opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
+  end
 
   lspconfig[server].setup(opts)
 end
