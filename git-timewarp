@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ARG=$(git rev-parse --sq-quote "$@")
+CMD="git-timewarp.sh $ARG"
+eval "$CMD"
