@@ -20,6 +20,7 @@ alias p_journals='sudo journalctl --vacuum-size=10M'
 # add color to common commands
 alias ls='ls --color=tty'
 alias grep='grep --color -n'
+alias sed="sed -E"
 
 # alias for better handling of dotfile
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
