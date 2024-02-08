@@ -64,6 +64,12 @@ return {
       end,
       desc = "Harpoon nav file 4",
     },
+    ["<leader>5"] = {
+      cmd = function()
+        require("harpoon.ui").nav_file(5)
+      end,
+      desc = "Harpoon nav file 5",
+    },
   },
   v = {
     ["K"] = { cmd = ":m '<-2<CR>gv=gv", desc = "Move highlighted text block up" },
