@@ -6,7 +6,7 @@ local _ = require("kobuvim.file_command_finder")
 
 local notify = require("notify")
 notify.setup({
-    top_down = false
+  top_down = false,
 })
 
 -- set notify.nvim as default notification function

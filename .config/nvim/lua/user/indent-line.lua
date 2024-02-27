@@ -3,5 +3,4 @@ if not indent_blankline then
   return
 end
 
-indent_blankline.setup({
-})
+indent_blankline.setup({})
