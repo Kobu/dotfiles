@@ -29,6 +29,7 @@ return {
     ["git"] = { cmd = ":Git<CR>", desc = "Git" },
     ["<C-a>"] = {
       cmd = function()
+        vim.notify("Added file to harpoon")
         require("harpoon.mark").add_file()
       end,
       desc = "Harpoon add file",
