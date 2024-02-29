@@ -22,6 +22,7 @@ local servers = {
   "lemminx",
   "prismals",
   "tailwindcss",
+  "jsonls",
 }
 
 local lspconfig = require("lspconfig")
