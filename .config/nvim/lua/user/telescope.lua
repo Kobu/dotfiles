@@ -201,6 +201,7 @@ telescope.setup({
     },
   },
   defaults = {
+    path_display = { "truncate" },
     mappings = {
       i = {
         ["<C-j>"] = actions.move_selection_next,
