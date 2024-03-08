@@ -211,22 +211,6 @@ telescope.setup({
     },
   },
   pickers = {
-    git_status = {
-      mappings = {
-        i = {
-          ["X"] = function(prompt_bufnr)
-            local picker = action_state.get_current_picker(prompt_bufnr)
-
-            -- temporarily register a callback which keeps selection on refresh
-            local selection = picker:get_selection_row()
-
-            -- refresh
-            picker:refresh({}, { reset_prompt = true })
-          end,
-        },
-      },
-    },
-
     live_grep = {
       mappings = {
         i = {
