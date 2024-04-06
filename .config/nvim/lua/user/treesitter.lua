@@ -17,6 +17,7 @@ treesitter_config.setup({
     "tsx",
     "regex",
     "bash",
+    "json",
   },
   sync_install = false,
   highlight = {
