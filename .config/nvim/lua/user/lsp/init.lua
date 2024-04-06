@@ -1,4 +1,5 @@
-local lsp_installer = load_plugin("nvim-lsp-installer")
+require("mason").setup()
+local lsp_installer = load_plugin("mason-lspconfig")
 if not lsp_installer then
   return
 end
@@ -12,13 +13,13 @@ local servers = {
   "lua_ls",
   "pyright",
   "clangd",
-  "tsserver",
+  "bashls",
   "tsserver",
   "emmet_ls",
   "cssls",
   "marksman",
   "omnisharp",
-  "hls",
+-- "hls",
   "lemminx",
   "prismals",
   "tailwindcss",
@@ -27,9 +28,6 @@ local servers = {
 
 local lspconfig = require("lspconfig")
 
-lsp_installer.setup({
-  ensure_installed = servers,
-})
 
 local handlers = {
   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
@@ -94,3 +92,7 @@ for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
+
+lsp_installer.setup({
+  ensure_installed = servers,
+})
