@@ -15,11 +15,8 @@ treesitter_config.setup({
     "html",
     "css",
     "tsx",
-    "c_sharp",
     "regex",
     "bash",
-    "markdown",
-    "markdown_inline",
   },
   sync_install = false,
   highlight = {
