@@ -3,7 +3,6 @@ return {
         preferences = {
             importModuleSpecifierPreference = "non-relative",
             importModuleSpecifierEnding = "minimal",
-            includeCompletionsForModuleExports = false,
         },
     },
 }
