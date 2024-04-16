@@ -1,8 +1,8 @@
 return {
-    init_options = {
-        preferences = {
-            importModuleSpecifierPreference = "non-relative",
-            importModuleSpecifierEnding = "minimal",
-        },
+  init_options = {
+    preferences = {
+      importModuleSpecifierPreference = "non-relative",
+      importModuleSpecifierEnding = "minimal",
     },
+  },
 }

@@ -19,7 +19,7 @@ local servers = {
   "cssls",
   "marksman",
   "omnisharp",
--- "hls",
+  -- "hls",
   "lemminx",
   "prismals",
   "tailwindcss",
@@ -27,7 +27,6 @@ local servers = {
 }
 
 local lspconfig = require("lspconfig")
-
 
 local handlers = {
   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
