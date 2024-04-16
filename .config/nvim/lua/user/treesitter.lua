@@ -18,6 +18,9 @@ treesitter_config.setup({
     "regex",
     "bash",
     "json",
+    "markdown",
+    "markdown_inline",
+    "sql",
   },
   sync_install = false,
   highlight = {
