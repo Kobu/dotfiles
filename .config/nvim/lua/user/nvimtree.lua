@@ -90,53 +90,53 @@ nvim_tree.setup({
           untracked = "U",
           ignored = "◌",
         },
-    },
-    git = {
+      },
+      git = {
         enable = true,
         ignore = true,
         timeout = 500,
-    },
-    view = {
+      },
+      view = {
         adaptive_size = true,
         width = 30,
         side = "left",
         number = false,
         signcolumn = "yes",
-    },
-    trash = {
+      },
+      trash = {
         cmd = "trash",
         require_confirm = true,
-    },
-    renderer = {
+      },
+      renderer = {
         add_trailing = true,
         highlight_git = true,
         icons = {
-            show = {
-                file = true,
-                folder = true,
-                folder_arrow = true,
-                git = false,
+          show = {
+            file = true,
+            folder = true,
+            folder_arrow = true,
+            git = false,
+          },
+          glyphs = {
+            default = "",
+            symlink = "",
+            git = {
+              unstaged = "",
+              staged = "S",
+              unmerged = "",
+              renamed = "➜",
+              deleted = "",
+              untracked = "U",
+              ignored = "◌",
             },
-            glyphs = {
-                default = "",
-                symlink = "",
-                git = {
-                    unstaged = "",
-                    staged = "S",
-                    unmerged = "",
-                    renamed = "➜",
-                    deleted = "",
-                    untracked = "U",
-                    ignored = "◌",
-                },
-                folder = {
-                    default = "",
-                    open = "",
-                    empty = "",
-                    empty_open = "",
-                    symlink = "",
-                },
+            folder = {
+              default = "",
+              open = "",
+              empty = "",
+              empty_open = "",
+              symlink = "",
             },
+          },
         },
       },
     },
