@@ -199,15 +199,17 @@ telescope.setup({
       only_cwd = true,
       -- This extension's options, see below.
     },
-  },
-  defaults = {
-    path_display = { "truncate" },
-    mappings = {
-      i = {
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-q>"] = actions.close,
-        ["<C-k>"] = actions.move_selection_previous,
-      },
+    defaults = {
+        layout_strategy = "vertical",
+        layout_config = { height = 0.95, width = 0.95, preview_height = 0.7 },
+        path_display = { "truncate" },
+        mappings = {
+            i = {
+                ["<C-j>"] = actions.move_selection_next,
+                ["<C-q>"] = actions.close,
+                ["<C-k>"] = actions.move_selection_previous,
+            },
+        },
     },
   },
   pickers = {
