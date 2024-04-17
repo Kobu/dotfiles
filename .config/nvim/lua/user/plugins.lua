@@ -80,4 +80,6 @@ return packer.startup(function(use)
     "danymat/neogen",
   })
   use("sindrets/diffview.nvim")
+    use("folke/tokyonight.nvim")
+
 end)

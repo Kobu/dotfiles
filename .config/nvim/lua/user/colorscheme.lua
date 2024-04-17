@@ -1,5 +1,4 @@
-vim.g.moonlight_borders = true
-require("moonlight").set()
+vim.cmd[[colorscheme tokyonight-night]]
 
 vim.cmd("highlight NotifyERRORBorder guifg=#8A1F1F")
 vim.cmd("highlight NotifyWARNBorder guifg=#79491D")
