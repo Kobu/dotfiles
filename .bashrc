@@ -60,7 +60,7 @@ cur_jobs () {
         # 3. replace newlines with commas
         # 4. ignore last two chars - a joining comma and a space
         jobs -s \
-            | sed "s/.*Stopped *\(.*\)/\1 /"  \
+            | sed "s/.*Stopped *(.*)/\1 /"  \
             | tr  '\n' ',' \
             | head -c -2
 
