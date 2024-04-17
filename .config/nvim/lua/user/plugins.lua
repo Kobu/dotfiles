@@ -79,4 +79,5 @@ return packer.startup(function(use)
   use({
     "danymat/neogen",
   })
+  use("sindrets/diffview.nvim")
 end)
