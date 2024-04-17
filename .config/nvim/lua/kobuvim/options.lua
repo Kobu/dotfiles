@@ -22,3 +22,4 @@ vim.opt.signcolumn = "yes"
 
 -- delete tildas after EOFs
 vim.opt.fcs = "eob: "
+vim.opt.fillchars:append { diff = "-" }

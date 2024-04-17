@@ -97,6 +97,19 @@ end, {})
 vim.keymap.set("n", "e", builtin.resume, {})
 vim.keymap.set("n", "<leader>td", ":TodoTelescope<CR>", {})
 
+local function doDiff()
+  -- Open in diffview
+  local selected_entry = action_state.get_selected_entry()
+  local value = selected_entry.value
+  -- close Telescope window properly prior to switching windows
+  vim.api.nvim_win_close(0, true)
+  vim.cmd("stopinsert")
+  vim.schedule(function()
+    vim.cmd(("DiffviewClose"):format(value))
+    vim.cmd(("DiffviewOpen %s^!"):format(value))
+  end)
+end
+
 local function getSha()
   local selection = action_state.get_selected_entry()
   local sha = selection.value
@@ -226,16 +239,18 @@ telescope.setup({
     git_bcommits = {
       mappings = {
         i = {
-          ["<cr>"] = getSha,
+          ["S"] = getSha,
           ["R"] = doRebase,
+          ["<cr>"] = doDiff,
         },
       },
     },
     git_commits = {
       mappings = {
         i = {
-          ["<cr>"] = getSha,
+          ["S"] = getSha,
           ["R"] = doRebase,
+          ["<cr>"] = doDiff,
         },
       },
     },
