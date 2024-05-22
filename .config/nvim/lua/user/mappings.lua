@@ -14,7 +14,7 @@ return {
     },
     ["H"] = { cmd = ":BufferLineCyclePrev<CR>", desc = "Cycle to previous buffer" },
     ["L"] = { cmd = ":BufferLineCycleNext<CR>", desc = "Cycle to next buffer" },
-    ["B"] = { cmd = ":bdelete<CR>", desc = "Close current buffer" },
+    ["B"] = { cmd = require("bufdelete").bufdelete, desc = "Close current buffer" },
     ["sf"] = {
       cmd = function()
         vim.lsp.buf.format()
