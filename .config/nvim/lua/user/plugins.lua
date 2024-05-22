@@ -70,6 +70,7 @@ return packer.startup(function(use)
 
   use("lewis6991/gitsigns.nvim")
   use("rcarriga/nvim-notify")
+  use("lukas-reineke/indent-blankline.nvim")
   use({
     "folke/todo-comments.nvim",
     requires = { { "nvim-lua/plenary.nvim" } },

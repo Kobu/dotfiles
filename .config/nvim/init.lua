@@ -15,6 +15,7 @@ require("user.lualine")
 require("user.telescope")
 require("user.null-ls")
 require("user.gitsigns")
+require("user.indent-line")
 require("user.todo-comments")
 
 require("user.hot-keys")
