@@ -142,6 +142,8 @@ export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 
 # nodejs: .node_relp_history
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+# ts-node: .ts_node_repl_history
+export TS_NODE_HISTORY="$XDG_STATE_HOME"/ts_node_repl_history
 
 # ghcup: .ghcup
 export GHCUP_USE_XDG_DIRS=true
@@ -155,6 +157,8 @@ export HISTFILE="${XDG_STATE_HOME}"/bash/history
 export HISTIGNORE="fg"
 
 export BROWSER=wslview
+
+
 
 source /usr/share/nvm/init-nvm.sh
 
