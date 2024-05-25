@@ -95,6 +95,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_DIRS="/usr/local/share:/usr/share"
 
+# move the history file to XDG_DATA_HOME
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+
 # cargo: .cargo
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
@@ -154,3 +157,4 @@ export HISTIGNORE="fg"
 export BROWSER=wslview
 
 source /usr/share/nvm/init-nvm.sh
+
