@@ -163,5 +163,8 @@ export BROWSER=wslview
 # nv: .nv
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
+# dotnet: .dotner
+export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+
 source /usr/share/nvm/init-nvm.sh
 
