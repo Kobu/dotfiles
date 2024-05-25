@@ -144,6 +144,8 @@ export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 # ts-node: .ts_node_repl_history
 export TS_NODE_HISTORY="$XDG_STATE_HOME"/ts_node_repl_history
+# nvm: .nvm
+export NVM_DIR="$XDG_DATA_HOME"/nvm
 
 # ghcup: .ghcup
 export GHCUP_USE_XDG_DIRS=true
