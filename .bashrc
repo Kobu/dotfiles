@@ -160,7 +160,8 @@ export HISTIGNORE="fg"
 
 export BROWSER=wslview
 
-
+# nv: .nv
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
 source /usr/share/nvm/init-nvm.sh
 
