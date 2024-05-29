@@ -78,7 +78,11 @@ vim.keymap.set("n", "gs", builtin.git_status, {})
 vim.keymap.set("n", "gb", builtin.git_branches, {})
 vim.keymap.set("n", "si", builtin.lsp_implementations, {})
 vim.keymap.set("n", "sd", builtin.lsp_definitions, {})
-vim.keymap.set("n", "ghb", builtin.git_bcommits, {})
+vim.keymap.set("n", "ghb", function()
+  builtin.git_bcommits({
+    git_command = { "git", "log", "--format=%C(bold blue)%h %C(211)[Date: %as] %C(magenta)[%an] %Creset%s" },
+  })
+end, {})
 vim.keymap.set("n", "gl", function()
   builtin.git_commits({
     git_command = { "git", "log", "--format=%C(bold blue)%h %C(211)[Date: %as] %C(magenta)[%an] %Creset%s" },
