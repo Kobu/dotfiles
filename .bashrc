@@ -34,7 +34,18 @@ alias coding="cd ~/coding"
 
 # open nvim in dev mode
 dvim(){
-  XDG_CONFIG_HOME=~/coding/dotfiles/.config/ nvim $1
+  XDG_CONFIG_HOME=~/coding/dotfiles/.config/ XDG_DATA_HOME=~/.local/share/dvim/ nvim $1
+}
+
+# open nvim obsidian mode
+ovim(){
+  NVIM_APPNAME=ovim nvim $1
+}
+
+# open nvim obsidian dev mode
+dovim(){
+    # INFO: XDG_DATA_HOME is NOT separate for dovim and ovim
+   NVIM_APPNAME=ovim XDG_CONFIG_HOME=~/coding/dotfiles/.config/ XDG_DATA_HOME=~/.local/share/ nvim $1
 }
 
 # function to create a directory and cd into it
