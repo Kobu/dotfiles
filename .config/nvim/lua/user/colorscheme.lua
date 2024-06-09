@@ -20,3 +20,14 @@ vim.cmd("highlight link NotifyWARNBody Normal")
 vim.cmd("highlight link NotifyINFOBody Normal")
 vim.cmd("highlight link NotifyDEBUGBody Normal")
 vim.cmd("highlight link NotifyTRACEBody Normal")
+
+
+vim.cmd [[highlight YankHighlight guibg=lightblue guifg=#000000 ctermbg=lightblue ctermfg=black]]
+
+-- Create an autocommand to highlight yanked text
+vim.api.nvim_exec([[
+  augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="YankHighlight", timeout=150}
+  augroup END
+]], false)
