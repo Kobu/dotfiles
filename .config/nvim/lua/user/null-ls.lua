@@ -13,6 +13,12 @@ null_ls.setup({
     -- formatting
     formatting.black.with({ extra_args = { "--fast" } }),
     formatting.stylua,
-    formatting.prettierd,
+
+    -- diagnostics
+    require("none-ls.diagnostics.eslint_d"),
+    require("none-ls.formatting.eslint_d"),
+
+    -- code_actions
+    require("none-ls.code_actions.eslint_d"),
   },
 })

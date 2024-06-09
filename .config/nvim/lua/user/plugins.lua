@@ -43,7 +43,12 @@ return packer.startup(function(use)
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
   use("L3MON4D3/LuaSnip")
-  use("nvimtools/none-ls.nvim")
+  use({
+    "nvimtools/none-ls.nvim",
+    requires = {
+      "nvimtools/none-ls-extras.nvim",
+    },
+  })
 
   use({
     "nvim-telescope/telescope.nvim",
