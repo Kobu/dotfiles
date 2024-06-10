@@ -13,3 +13,7 @@ notify.setup({
 vim.notify = notify
 
 mappings_helper.set_mappings(user_mappings)
+
+vim.api.nvim_del_keymap('n', 'gcc')
+vim.api.nvim_del_keymap('x', 'gc')
+
