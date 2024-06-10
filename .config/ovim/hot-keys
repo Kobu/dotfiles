@@ -1,0 +1,14 @@
+<C-f> reveal current buffer in file explorer
+W collapse all directories in nvim-tree
+<leader>hk open hot keys menu
+y copy filename
+Y copy relative path
+gy copy absolute path
+H toggle hidden files
+I toggle gitignore
+gU<selection> to make characters uppercase
+gu<selection> to make characters lowercase
+~ [v mode] to switch case of every selected character
+~ [i mode] to switch case character below cursor
+<C-w>| to maximize a window split
+<C-w>= to split windows equally
