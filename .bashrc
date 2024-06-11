@@ -169,8 +169,6 @@ export CABAL_DIR="$XDG_DATA_HOME"/cabal
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
 export HISTIGNORE="fg"
 
-export BROWSER=wslview
-
 # nv: .nv
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
