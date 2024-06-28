@@ -25,6 +25,15 @@ local function on_attach(bufnr)
   vim.keymap.set("n", "Y", api.fs.copy.relative_path, opts())
   vim.keymap.set("n", "gy", api.fs.copy.absolute_path, opts())
   vim.keymap.set("n", "<CR>", api.node.open.edit, opts())
+  vim.keymap.set("n", "<C-a>", function()
+    local lib = require("nvim-tree.lib")
+    local node = lib.get_node_at_cursor()
+
+    if node then
+      require("harpoon.mark").add_file(node.absolute_path)
+      vim.notify("Added file to harpoon")
+    end
+  end)
 end
 
 vim.keymap.set("n", "<leader>e", api.tree.toggle)
