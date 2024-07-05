@@ -177,5 +177,3 @@ export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
 
 # docker: .docker
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
-
-source /usr/share/nvm/init-nvm.sh
