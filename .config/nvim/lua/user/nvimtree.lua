@@ -33,7 +33,7 @@ local function on_attach(bufnr)
       require("harpoon.mark").add_file(node.absolute_path)
       vim.notify("Added file to harpoon")
     end
-  end)
+  end, opts())
 end
 
 vim.keymap.set("n", "<leader>e", api.tree.toggle)
