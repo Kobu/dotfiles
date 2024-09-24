@@ -87,7 +87,7 @@ fastfetch
 # make MUNI directory globally available
 export MUNI=/home/kobu/muni
 # export current semster
-export CURENT_SEMESTER="6sem"
+export CURENT_SEMESTER="7sem"
 # alias for cd-ing to the folder of the current semester
 alias semester='cd $MUNI/$CURENT_SEMESTER'
 
