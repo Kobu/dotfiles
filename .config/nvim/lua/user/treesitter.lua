@@ -22,6 +22,7 @@ treesitter_config.setup({
     "markdown_inline",
     "sql",
     "glimmer",
+    "rust"
   },
   sync_install = false,
   highlight = {

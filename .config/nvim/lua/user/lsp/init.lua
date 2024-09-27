@@ -24,6 +24,7 @@ local servers = {
   "prismals",
   "tailwindcss",
   "jsonls",
+  "rust_analyzer"
 }
 
 local lspconfig = require("lspconfig")

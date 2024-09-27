@@ -12,6 +12,7 @@ local servers = {
   xml = "lemminx",
   prisma = "prismals",
   tailwindcss = "tailwindcss",
+  rust_analyzer = "rust_analyzer",
 }
 
 return servers
