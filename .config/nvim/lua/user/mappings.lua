@@ -3,7 +3,7 @@ return {
     ["<leader>y"] = { cmd = '"+y', desc = "Yank to system clipboard" },
     ["<C-q>"] = { cmd = ":q<CR>", desc = "Remap :q" },
     ["<leader>Y"] = { cmd = '"+Y', desc = "Yank to system clipboard" },
-    ["Y"] = { cmd = 'y$', desc = "Yank rest of the line" },
+    ["Y"] = { cmd = "y$", desc = "Yank rest of the line" },
     ["<Space>"] = { cmd = "<Nop>", desc = "Reserve space as leader keymap" },
     ["Q"] = { cmd = "<Nop>", desc = "Prevent me from having a bad time" },
     ["<C-_>"] = {
@@ -18,7 +18,7 @@ return {
     ["B"] = { cmd = require("bufdelete").bufdelete, desc = "Close current buffer" },
     ["sf"] = {
       cmd = function()
-        vim.lsp.buf.format()
+        vim.lsp.buf.format({ timeout = 10000 })
       end,
       desc = "Format according to null-ls",
     },
