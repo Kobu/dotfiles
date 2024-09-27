@@ -14,7 +14,7 @@ local servers = {
   "pyright",
   "clangd",
   "bashls",
-  "tsserver",
+  "ts_ls",
   "emmet_ls",
   "cssls",
   "marksman",
