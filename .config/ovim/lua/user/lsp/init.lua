@@ -4,17 +4,12 @@ if not lsp_installer then
   return
 end
 
-local lsp_signature = load_plugin("lsp_signature")
-if not lsp_signature then
-  return
-end
-
 local servers = {
   "lua_ls",
   "pyright",
   "clangd",
   "bashls",
-  "tsserver",
+  "ts_ls",
   "emmet_ls",
   "cssls",
   "marksman",
@@ -48,15 +43,6 @@ local on_attach = function(_, bufnr)
   vim.keymap.set("n", "sk", vim.diagnostic.goto_prev)
   vim.keymap.set("n", "sj", vim.diagnostic.goto_next)
   vim.keymap.set("n", "sa", vim.lsp.buf.code_action, { buffer = 0 })
-  lsp_signature.on_attach({
-    toggle_key = "<C-h>",
-    doc_lines = 0,
-    hint_enable = false,
-    bind = true,
-    handler_opts = {
-      border = "rounded",
-    },
-  }, bufnr)
 end
 
 for _, server in pairs(servers) do

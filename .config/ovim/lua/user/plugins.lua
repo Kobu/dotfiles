@@ -29,12 +29,20 @@ return packer.startup(function(use)
     "williamboman/mason.nvim",
   })
   use("williamboman/mason-lspconfig.nvim")
+  use("shaunsingh/moonlight.nvim")
 
   use({
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   })
   use("neovim/nvim-lspconfig")
+  use("windwp/nvim-autopairs")
+  use({
+    "nvimtools/none-ls.nvim",
+    requires = {
+      "nvimtools/none-ls-extras.nvim",
+    },
+  })
 
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-nvim-lsp")
@@ -42,6 +50,7 @@ return packer.startup(function(use)
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
   use("L3MON4D3/LuaSnip")
+  use("lewis6991/gitsigns.nvim")
 
   use({
     "nvim-telescope/telescope.nvim",
@@ -49,8 +58,6 @@ return packer.startup(function(use)
   })
 
   use("norcalli/nvim-colorizer.lua")
-
-
 
   use("goolord/alpha-nvim")
 
@@ -68,29 +75,15 @@ return packer.startup(function(use)
   use("famiu/bufdelete.nvim")
   use("andweeb/presence.nvim")
   use({
+    "folke/todo-comments.nvim",
+    requires = { { "nvim-lua/plenary.nvim" } },
+  })
+
+  use({
     "epwalsh/obsidian.nvim",
-    tag = "*", -- recommended, use latest release instead of latest commit
+    tag = "*",
     requires = {
-      -- Required.
       "nvim-lua/plenary.nvim",
-
-      -- see below for full list of optional dependencies 👇
     },
-    config = function()
-      require("obsidian").setup({
-        workspaces = {
-          {
-            name = "personal",
-            path = "~/vaults/personal",
-          },
-          {
-            name = "work",
-            path = "~/vaults/work",
-          },
-        },
-
-        -- see below for full list of options 👇
-      })
-    end,
   })
 end)
