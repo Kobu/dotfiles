@@ -19,3 +19,5 @@ obsidian.setup({
     time_format = "%H:%M",
   },
 })
+
+vim.keymap.set("n", "<leader>ot", ":ObsidianTags<cr>", { nowait = true })
