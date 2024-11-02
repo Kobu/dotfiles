@@ -63,6 +63,9 @@ tag.connect_signal("request::default_layouts", function()
   })
 end)
 -- }}}
+screen.connect_signal("request::wallpaper", function(s)
+gears.wallpaper.maximized(beautiful.wallpaper, s)
+end)
 
 client.connect_signal("request::manage", function(c)
     c.shape = function(cr, w, h)
@@ -70,24 +73,6 @@ client.connect_signal("request::manage", function(c)
     end
 end)
 
--- {{{ Wallpaper
-screen.connect_signal("request::wallpaper", function(s)
-  awful.wallpaper({
-    screen = s,
-    widget = {
-      {
-        image = beautiful.wallpaper,
-        upscale = true,
-        downscale = true,
-        widget = wibox.widget.imagebox,
-      },
-      valign = "center",
-      halign = "center",
-      tiled = false,
-      widget = wibox.container.tile,
-    },
-  })
-end)
 
 -- }}}
 
@@ -385,7 +370,7 @@ awful.keyboard.append_global_keybindings({
 awful.rules.rules = {
   {
     rule_any = { class = { "Polybar" } },
-    properties = { focusable = false },
+    properties = { focusable = false , border_width = 0},
   },
 }
 
