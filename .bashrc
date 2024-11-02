@@ -24,6 +24,8 @@ alias sed="sed -E"
 
 # alias for better handling of dotfile
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# add git completions
+source /usr/share/git/completion/git-completion.bash
 
 # aliases for easier copying/pasting to system clipboard
 alias c="xclip -selection clipboard"
@@ -31,6 +33,7 @@ alias p="xclip -selection clipboard -o"
 
 # cd into the coding folder
 alias coding="cd ~/coding"
+
 
 # open nvim in dev mode
 dvim(){
