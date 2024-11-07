@@ -18,7 +18,7 @@ alias p_cache='sudo pacman -Scc && yay -Scc'
 alias p_journals='sudo journalctl --vacuum-size=10M'
 
 # add color to common commands
-alias ls='ls --color=tty'
+alias ls='ls --color=tty -lah'
 alias grep='grep --color -n'
 alias sed="sed -E"
 
