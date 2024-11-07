@@ -15,6 +15,7 @@ end
 
 -- Have packer use a popup window
 packer.init({
+  package_root = "~/.local/share/ovim/site/pack",
   display = {
     open_fn = function()
       return require("packer.util").float({ border = "rounded" })
