@@ -5,19 +5,7 @@ if not lsp_installer then
 end
 
 local servers = {
-  "lua_ls",
-  "pyright",
-  "clangd",
-  "bashls",
-  "ts_ls",
-  "emmet_ls",
-  "cssls",
   "marksman",
-  "omnisharp",
-  -- "hls",
-  "lemminx",
-  "prismals",
-  "tailwindcss",
   "jsonls",
 }
 
