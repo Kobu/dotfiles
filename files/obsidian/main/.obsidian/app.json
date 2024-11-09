@@ -1,0 +1,15 @@
+{
+  "vimMode": true,
+  "showFrontmatter": true,
+  "spellcheck": false,
+  "promptDelete": false,
+  "showInlineTitle": false,
+  "trashOption": "none",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./attachments",
+  "showLineNumber": true,
+  "tabSize": 2,
+  "readableLineLength": false
+}

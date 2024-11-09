@@ -1,0 +1,11 @@
+{
+  "editor:delete-paragraph": [],
+  "file-explorer:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "A"
+    }
+  ]
+}
