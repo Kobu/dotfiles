@@ -1,0 +1,21 @@
+[user]
+	name = Kobu
+	email = thekobu@gmail.com
+	signingKey = CD1A8DF31341C1E3
+[credential]
+	helper = store
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[alias]
+	l = log --format=format:\"%C(bold blue)%h %C(211)[%as] %C(auto,blue)%d %C(magenta)[%an] %Creset%s\" 
+[commit]
+	gpgsign = true
