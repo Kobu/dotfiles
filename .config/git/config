@@ -1,7 +1,7 @@
 [user]
 	name = Kobu
 	email = thekobu@gmail.com
-	signingKey = CD1A8DF31341C1E3
+	signingkey = 8198794C68C7D152
 [credential]
 	helper = store
 [core]
