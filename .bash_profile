@@ -5,7 +5,7 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # launch nowaster at startup
-sh ~/utils/nowaster.sh  &>/dev/null &
+nowaster
 
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519_github

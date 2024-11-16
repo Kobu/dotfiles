@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cd /home/kobu/utils/nowaster-web/
+git fetch origin main
+
+if [ "$(git log main..origin/main)" != "" ]; then
+    git pull origin main
+    # frontend
+    cd /home/kobu/utils/nowaster-web/next-frontend/
+    npm i
+    npm run build
+
+    #backend
+    cd /home/kobu/utils/nowaster-web/backend/
+    npm i
+fi
+
+cd /home/kobu/utils/nowaster-web/next-frontend/
+npm run start &
+
+cd /home/kobu/utils/nowaster-web/backend/
+npm run prod &
