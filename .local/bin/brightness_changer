@@ -5,9 +5,9 @@ AMOUNT=15
 
 case $ACTION in
     up)
-        light -A $AMOUNT;;
+        brightnessctl set ${AMOUNT}%+;;
     down)
-        light -U $AMOUNT;;
+        brightnessctl set ${AMOUNT}%-;;
 esac
 
 
