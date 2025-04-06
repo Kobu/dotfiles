@@ -4,9 +4,6 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-# launch nowaster at startup
-nowaster
-
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
