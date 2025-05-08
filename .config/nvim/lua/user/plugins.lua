@@ -57,7 +57,7 @@ return packer.startup(function(use)
 
   use("shaunsingh/moonlight.nvim")
   use("p00f/nvim-ts-rainbow")
-  use("norcalli/nvim-colorizer.lua")
+  use("catgoose/nvim-colorizer.lua")
 
   use("windwp/nvim-autopairs")
 
