@@ -101,7 +101,7 @@ done
 
 
 export EDITOR="nvim"
-export PATH="$PATH:/home/kobu/.local/bin"
+export PATH="$PATH:/home/kobu/.local/bin:/home/kobu/.local/share/cargo/bin"
 
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_DATA_HOME="$HOME/.local/share"
