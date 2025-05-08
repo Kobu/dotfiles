@@ -85,6 +85,7 @@ end)
 
 -- General Awesome keys
 awful.keyboard.append_global_keybindings({
+  awful.key({modkey, }, "n", awful.client.movetoscreen),
   awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
   awful.key({ modkey }, "Return", function()
     awful.spawn(terminal)
