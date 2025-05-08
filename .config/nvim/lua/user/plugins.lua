@@ -37,6 +37,25 @@ return packer.startup(function(use)
   })
   use("neovim/nvim-lspconfig")
 
+  use({
+    "pmizio/typescript-tools.nvim",
+    requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    config = function()
+      require("typescript-tools").setup({
+        settings = {
+          tsserver_file_preferences = {
+            importModuleSpecifierEnding = "non-relative",
+            importModuleSpecifierPreference = "non-relative",
+          },
+        },
+        on_attach = function(client)
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentRangeFormattingProvider = false
+        end,
+      })
+    end,
+  })
+
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-nvim-lua")

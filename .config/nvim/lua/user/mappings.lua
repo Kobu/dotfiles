@@ -18,6 +18,11 @@ return {
     ["B"] = { cmd = require("bufdelete").bufdelete, desc = "Close current buffer" },
     ["sf"] = {
       cmd = function()
+        local ft = vim.bo.filetype
+        if ft == "typescript" or ft == "typescriptreact" then
+          vim.cmd("TSToolsOrganizeImports")
+          vim.cmd("TSToolsAddMissingImports")
+        end
         vim.lsp.buf.format({ timeout = 10000 })
       end,
       desc = "Format according to null-ls",
