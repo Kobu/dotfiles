@@ -160,6 +160,8 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export TS_NODE_HISTORY="$XDG_STATE_HOME"/ts_node_repl_history
 # nvm: .nvm
 export NVM_DIR="$XDG_DATA_HOME"/nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 
 # ghcup: .ghcup
 export GHCUP_USE_XDG_DIRS=true
