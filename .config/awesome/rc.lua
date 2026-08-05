@@ -41,7 +41,7 @@ end)
 beautiful.init("/home/kobu/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "kitty"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
